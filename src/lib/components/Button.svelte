@@ -1,29 +1,31 @@
 <script>
-  import { borderAll } from "$lib/commonClasses.js";
+  import { borderAll, border_b , borderDark_b } from "$lib/commonClasses.js";
   import IconRenderer from "./IconRenderer.svelte";
   export let label = "Forgot..",
     mode = "primary",
     invert = false,
     logo = true,
-    sticky = false;
+    overide,
+    sticky = false,
+    onClick = () => {};
   let primary, active;
   if (!invert) {
-    primary = "text-slate-900 hover:text-white hover:bg-slate-900";
-    active = "bg-slate-900 text-white";
+    primary = "text-stone-900 bg-white hover:text-white hover:bg-stone-900";
+    active = "bg-stone-900 text-white";
   } else {
-    primary = "text-white hover:text-slate-900 hover:bg-white";
-    active = "bg-white text-slate-900";
+    primary = "text-white bg-stone-900 hover:text-stone-900 hover:bg-white";
+    active = "bg-white text-stone-900";
   }
   let stickyClass = sticky ? "sticky top-0 z-50" : "";
 </script>
 
-<div
-  class="h-[5dvi] hover:cursor-pointer {borderAll} {stickyClass} sticky inline-flex items-center justify-between px-[1.5dvi] {mode ==
+<button on:click={()=>onClick(label)}
+  class=" md:h-[5dvi] h-[15dvi]  {overide} hover:cursor-pointer transition-all duration-200 {borderAll} {stickyClass} sticky inline-flex items-center justify-between px-[1.5dvi] {mode ==
   'primary'
     ? primary
-    : ''} {mode == 'active'}"
+    : ''} {mode == 'active'? active:""}"
 >
-  <div class="text-h2_lg font-['ringold-sans'] leading-[1] mt-[0.6dvi]">
+  <div class=" text-h2_sm md:text-h2_lg  font-['ringold-sans'] leading-[1] mt-[0.6dvi]">
     {label}
   </div>
   {#if logo}
@@ -31,4 +33,4 @@
       <slot />
     </IconRenderer>
   {/if}
-</div>
+  </button>
