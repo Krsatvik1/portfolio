@@ -18,7 +18,7 @@
 
 <button
   on:click={() => onClick()}
-  class=" md:h-[5dvi] h-[15dvi]  {overide} w-[5dvi] flex justify-center items-center hover:cursor-pointer transition-all duration-200 {sticky?border_b+""+borderDark_b:borderAll} items-center justify-between {mode ==
+  class=" lg:h-[5dvi] h-[15dvi]  {overide} lg:w-[5dvi] w-[15dvi] flex justify-center items-center hover:cursor-pointer transition-all duration-200 {sticky?border_b+""+borderDark_b:borderAll} items-center justify-between {mode ==
   'primary'
     ? primary
     : ''} {mode == 'active' ? active : ''}"
