@@ -4,7 +4,9 @@
   import Title from "$lib/components/Title.svelte";
   import Body from "$lib/components/Body.svelte";
   import Button from "$lib/components/Button.svelte";
-
+  let onClick = () => {
+        window.location = x
+    };
   let mob_index = 0;
   let wireframe_index = 0;
   let desk_index = 0;
@@ -309,8 +311,8 @@
       text_col="col-span-1 lg:col-span-1"
       height="h-[45dvi] lg:h-[25dvi]"
     />
-    <Button label="Mapping " overide="mobi"
-      ><svelte:component this={ExternalLink} /></Button
+    <Button onClick={()=>{onClick("https://www.figma.com/board/FHJ0wYopUzywsqUlc1cm9Q/Current-Intake-Process-flow?node-id=0-1&t=1Lqe68Xn1vATh2CC-1")}} label="Mapping " overide="mobi"
+      ><svelte:component this={ExternalLink}/></Button
     >
     <Title
       label="Features/Functionalities"
