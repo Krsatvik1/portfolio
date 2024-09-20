@@ -3,7 +3,6 @@
   import ButtonSmall from "$lib/components/ButtonSmall.svelte";
   import { onMount } from "svelte";
   import Modal from "./Modal.svelte";
-  import Filter from "$lib/components/icons/Filter.svelte";
   import {
     border,
     borderLight,
