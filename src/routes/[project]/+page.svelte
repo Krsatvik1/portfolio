@@ -38,7 +38,7 @@
     <div class="text-h1_sm lg:text-h1_lg font-['ringold-sans']">
       Digital Intake and Assessment Platform
     </div>
-    <p class="text-base_sm lg:text-base_lg md:max-w-[30dvi]">
+    <p class="text-base_sm lg:text-base_lg lg:max-w-[30dvi]">
       Optimize the intake process for a mental health clinic by understanding
       existing workflows and identifying key requirements for both patients and
       administrators. The project focused on designing a digital platform that
@@ -131,7 +131,7 @@
     </div>
 
     <div
-      class="justify-self-end text-base_sm lg:text-base_lg font-bold space-y-[1dvi] lg:space-y-[0.5dvi] mt-[2dvi] md:mt-0"
+      class="justify-self-end text-base_sm lg:text-base_lg font-bold space-y-[1dvi] lg:space-y-[0.5dvi] mt-[2dvi] lg:mt-0"
     >
       <p>Automating Tasks</p>
       <p>Centralized Platform</p>
@@ -156,7 +156,7 @@
     </div>
 
     <div
-      class="justify-self-end text-base_sm lg:text-base_lg font-bold space-y-[1dvi] lg:space-y-[0.5dvi] mt-[2dvi] md:mt-0"
+      class="justify-self-end text-base_sm lg:text-base_lg font-bold space-y-[1dvi] lg:space-y-[0.5dvi] mt-[2dvi] lg:mt-0"
     >
       <p>User-Friendly Design</p>
       <p>Progress Tracking</p>

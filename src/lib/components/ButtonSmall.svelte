@@ -19,7 +19,7 @@
     active_1 = "bg-stone-900";
     active = "bg-white text-stone-900";
   }
-  let stickyClass = sticky ? "sticky top-[15dvi] md:top-0 z-50" : "";
+  let stickyClass = sticky ? "sticky top-[15dvi] lg:top-0 z-50" : "";
 </script>
 
 <button

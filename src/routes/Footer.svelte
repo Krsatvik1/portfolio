@@ -41,7 +41,7 @@
   }
 </script>
 
-<form on:submit|preventDefault={handleSubmit} class=" col-span-2 lg:col-span-3 grid grid-cols-2 lg:grid-cols-3 mt-[15dvi] md:mt-[5dvi] relative">
+<form on:submit|preventDefault={handleSubmit} class=" col-span-2 lg:col-span-3 grid grid-cols-2 lg:grid-cols-3 mt-[15dvi] lg:mt-[5dvi] relative">
   <div class=" overflow-hidden col-span-2 w-[calc(100%+1px)] relative
   
   before:content-['']  before:absolute before:top-0 before:w-full before:transition-all before:duration-200   before:h-full before:left-0 before:border-[0px]  before:border-stone-900 
@@ -60,7 +60,7 @@
     <input type="email" required name='email' placeholder="name@work.com" class="px-[5dvi] lg:px-[2dvi] {borderAll} block  bg-opacity-0
     focus:outline-none focus:border-stone-900 focus:ring-0 w-full 
     
-    align-middle pt-[2dvi] md:pt-[0.6dvi] font-bold lg:font-normal lg:font-['ringold-sans']  text-base_sm lg:text-h2_lg placeholder:text-stone-300  lg:h-[5dvi] h-[15dvi] z-10 relative">
+    align-middle pt-[2dvi] lg:pt-[0.6dvi] font-bold lg:font-normal lg:font-['ringold-sans']  text-base_sm lg:text-h2_lg placeholder:text-stone-300  lg:h-[5dvi] h-[15dvi] z-10 relative">
   </div>
     <Button type="submit" label={$message} mode="primary" overide="col-span-2 lg:col-span-1" invert={false} sticky={false}>
         <svelte:component this={$icons} />
@@ -79,7 +79,7 @@
           <a href="tel:+91-7783026453" class="block">+91-7783026453</a>
         </div>
         <div
-          class="w-[60dvi] md:w-auto text-base_sm lg:text-base_lg  font-bold uppercase"
+          class="w-[60dvi] lg:w-auto text-base_sm lg:text-base_lg  font-bold uppercase"
         >
           ALL RIGHTS RESERVED 2024 © KUMAR SATVIK
         </div>
