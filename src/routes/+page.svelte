@@ -1,7 +1,9 @@
 <script>
     import WorkItem from "./WorkItem.svelte";
   </script>
-
+  <svelte:head>
+    <title>KUMAR SATVIK</title>
+  </svelte:head>
   <WorkItem label="Digital Intake and Assessment Platform" tags="UI UX / WebApp / NDA" link="/digital-intake-and-assessment-platform"/>
   <WorkItem label="INVST: Trade Simulator" tags="UI UX / Mobile App / Classroom Assignment" link="https://www.behance.net/gallery/208250403/INVST-Trade-Simulator" />
   <WorkItem label="Creative Coding - Designer's Guide" tags="Publication / Creative Coding / Classroom Assignment" link="https://www.behance.net/gallery/193824279/Creative-Coding-Designers-Guider" />

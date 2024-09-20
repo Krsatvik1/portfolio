@@ -25,20 +25,24 @@
     
   }
 
-    let onClick = (x) => {
+    let onClick = () => {
         window.location = x
     };
-    async function handleSubmit() {
+    async function handleSubmit(e) {
+      e.preventDefault();
 
-    const response = await fetch('/api/mail', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email })
-    });
-    
-    result = await response.json();
-    showModal.set(true)
-  }
+      const formData = new FormData(e.target);
+      const email = formData.get('email');
+      console.log(email);
+      const response = await fetch('/api/mail', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify( {email} )
+      });
+
+      result = await response.json();
+      showModal.set(true);
+    }
 </script>
 
 <form on:submit|preventDefault={handleSubmit} class=" col-span-2 lg:col-span-3 grid grid-cols-2 lg:grid-cols-3 mt-[15dvi] lg:mt-[5dvi] relative">

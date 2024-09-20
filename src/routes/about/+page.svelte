@@ -5,6 +5,9 @@
     import SkillItem from "./SkillItem.svelte";
     import Testimonies from "./Testimonies.svelte";
 </script>
+<svelte:head>
+  <title>KUMAR SATVIK | About</title>
+</svelte:head>
 <div class="{borderAll} col-span-4 lg:col-span-1 h-[75dvi] lg:h-[20dvi]">
     <div class="h-full w-full overflow-hidden">
         <enhanced:img src="$lib/images/profile.jpg" alt="Kumar Satvik" />

@@ -2,7 +2,7 @@ import { json } from '@sveltejs/kit';
 import { sendEmail } from '$lib/email';
 
 export async function POST({ request }) {
-  const {  email } = await request.json();
+  const { email } = await request.json();
   
   const result = await sendEmail({
     to: 'kumar.satvik@pirata.design',

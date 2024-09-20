@@ -26,7 +26,9 @@
 
   import ExternalLink from "$lib/components/icons/external-link.svelte";
 </script>
-
+<svelte:head>
+  <title>KUMAR SATVIK | Projects</title>
+</svelte:head>
 <div class="col-span-2"></div>
 <div class="lg:col-span-4 col-span-2 grid grid-cols-2 lg:grid-cols-4">
   <div
