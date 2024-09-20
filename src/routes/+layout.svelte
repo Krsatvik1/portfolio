@@ -45,7 +45,18 @@
       document.querySelector(".animation-1>span").innerHTML = "TVIK";
     }, 100);
   };
+  function downloadFile() {
+      const fileUrl = "/CV_Kumar_Satvik.pdf";
+      const link = document.createElement("a");
+      link.href = fileUrl;
+      link.download = "CV_Kumar_Satvik.pdf";
+      link.click();
+    }
   onMount(() => {
+
+   
+
+
     gsap.registerPlugin(ScrollTrigger, RoughEase, Observer);
     let tl = gsap.timeline();
     if (window.innerWidth >= 1024) {
@@ -69,7 +80,7 @@
           start: "bottom top",
           end: "bottom top",
           scrub: 0,
-          markers: true,
+          markers: false,
           onEnter: () => NavHeaderAimation(),
           onEnterBack: () => NavHeaderAimation_2(),
         },
@@ -108,7 +119,7 @@
   <div
     class="h-[calc(15dvi+1px)] lg:h-[calc(5dvi+1px)] w-[calc(15dvi)] lg:w-[5dvi] overflow-hidden"
   >
-    <ButtonSmall sticky={true}>
+    <ButtonSmall label="CV" onClick={downloadFile}  logo=False sticky={true}>
       <svelte:component this={Filter} />
     </ButtonSmall>
   </div>
