@@ -2,9 +2,9 @@
     import {navState} from '$lib/store.js'
     import {onMount} from 'svelte';
     import Button from '$lib/components/Button.svelte';
-    import User from '$lib/components/icons/User.svelte';
+    import User from '$lib/components/icons/user.svelte';
     import { goto } from '$app/navigation'
-    import Briefcase from '$lib/components/icons/Briefcase.svelte';
+    import Briefcase from '$lib/components/icons/briefcase.svelte';
     let onClick = (label)=>{
         navState.update(label)
         if (label=='about') {

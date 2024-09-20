@@ -10,7 +10,6 @@
   overide = "",
   text_size = "h1",
   invert = false,
-  img=false,
   btn=false;
 </script>
 

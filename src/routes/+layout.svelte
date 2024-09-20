@@ -119,7 +119,7 @@
     class="h-[calc(15dvi+1px)] lg:h-[calc(5dvi+1px)] w-[calc(15dvi)] lg:w-[5dvi] overflow-hidden"
   >
     <ButtonSmall label="CV" onClick={downloadFile}  logo=False sticky={true}>
-      <svelte:component this={Filter} />
+  
     </ButtonSmall>
   </div>
 </div>

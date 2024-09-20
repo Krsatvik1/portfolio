@@ -1,7 +1,7 @@
 <script>
     import Title from "$lib/components/Title.svelte";
     import Body from "$lib/components/Body.svelte";
-    export let from = "Forgot..",
+    export let 
     message = "Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,"
 </script>
 <div class="col-span-4 lg:col-span-2 grid grid-cols-2 mt-[15dvi] lg:mt-[5dvi]">
