@@ -13,4 +13,5 @@
   <div
     class="p-[5dvi] lg:p-[2dvi] flex-col justify-center text-{text_size}_sm lg:text-{text_size}_lg  {text_size=="cap"?"font-bold":"font-['ringold-sans']"} {text_size=="h1"?"mt-[1dvi] lg:mt-[0.6dvi]":""} {text_size=="h2"?"mt-[1dvi] lg:mt-[0.2dvi]":''} h-full items-start gap-[4dvi] lg:gap-[1.5dvi] inline-flex "
   >{label}</div>
+  
 </div>

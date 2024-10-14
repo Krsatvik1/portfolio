@@ -100,7 +100,7 @@
     });
   });
 </script>
-
+<div class="hidden col-span-1 col-span-2 col-span-3 col-span-4 lg:col-span-1 lg:col-span-2 lg:col-span-3 lg:col-span-4"></div>
 <div
   class="flex animation-2 w-[calc(100%)] overflow-y-visible sticky top-0 left-0 justify-between z-50"
 >
