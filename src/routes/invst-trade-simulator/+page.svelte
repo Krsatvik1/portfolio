@@ -296,7 +296,97 @@
   height="h-[30dvi] lg:h-[10dvi]"
   marginT={true}
 />
+<Title
+  label="User Flows / Wireframes"
+  text_size="h2"
+  height="h-[30dvi] lg:h-[5dvi]"
+  lg_col_span="2"
+  sm_col_span="4"
+  overide="lg:col-start-1"
+/>
+<Title
+  label="Onboarding"
+  text_size="cap"
+  height="h-[15dvi] lg:h-[5dvi]"
+  lg_col_span="1"
+  sm_col_span="4"
+  overide=""
+/>
+<div
+  class="{borderAll} col-span-4 lg:col-span-4 flex-col justify-start items-start gap-[4dvi] lg:gap-[1.5dvi] inline-flex lg:h-[30dvi] h-[60dvi] w-full"
+>
+  <iframe
+    style="border: 1px solid rgba(0, 0, 0, 0.1);"
+    width="100%"
+    height="100%"
+    src="https://embed.figma.com/board/pmh1QBbHlHdnHjtav0vVYg/Onboarding?node-id=0-1&embed-host=share"
+    allowfullscreen
+  ></iframe>
+</div>
 
+<div class="lg:col-span-4 grid lg:grid-cols-4 col-span-4">
+  <div class="lg:col-span-2 grid lg:grid-cols-2">
+    <Title
+      label="Portfolio / Watchlist"
+      text_size="cap"
+      height="h-[15dvi] lg:h-[5dvi]"
+      lg_col_span="1"
+      sm_col_span="4"
+      overide=""
+    />
+    <div
+      class="{borderAll} col-span-4 lg:col-span-4 flex-col justify-start items-start gap-[4dvi] lg:gap-[1.5dvi] inline-flex lg:h-[30dvi] h-[60dvi] w-full"
+    >
+      <iframe
+        style="border: 1px solid rgba(0, 0, 0, 0.1);"
+        width="100%"
+        height="100%"
+        src="https://embed.figma.com/board/hIrcIeT8r7jM06GJZv4K2K/Portfolio_Watchlist?node-id=0-1&embed-host=share"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+  <div class="lg:col-span-2 grid lg:grid-cols-2">
+    <Title
+      label="Rewards"
+      text_size="cap"
+      height="h-[15dvi] lg:h-[5dvi]"
+      lg_col_span="1"
+      sm_col_span="4"
+      overide=""
+    />
+    <div
+      class="{borderAll} col-span-4 lg:col-span-4 flex-col justify-start items-start gap-[4dvi] lg:gap-[1.5dvi] inline-flex lg:h-[30dvi] h-[60dvi] w-full"
+    >
+      <iframe
+        style="border: 1px solid rgba(0, 0, 0, 0.1);"
+        width="100%"
+        height="100%"
+        src="https://embed.figma.com/board/EDENrf4UQ9VatoZs8JyiRF/Reward?node-id=0-1&embed-host=share"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+</div>
+<Title
+  label="Discovery"
+  text_size="cap"
+  height="h-[15dvi] lg:h-[5dvi]"
+  lg_col_span="1"
+  sm_col_span="4"
+  overide=""
+/>
+<div
+  class="{borderAll} col-span-4 lg:col-span-4 flex-col justify-start items-start gap-[4dvi] lg:gap-[1.5dvi] inline-flex lg:h-[40dvi] h-[120dvi] w-full"
+>
+  <iframe
+    style="border: 1px solid rgba(0, 0, 0, 0.1);"
+    width="100%"
+    height="100%"
+    src="https://embed.figma.com/board/5nnV6QoGjOaRD48lVgL9N7/Discovery?node-id=0-1&embed-host=share"
+    allowfullscreen
+  ></iframe>
+</div>
 <Title
   label="Design System"
   text_size="h2"
@@ -307,7 +397,9 @@
   marginT={true}
 />
 
-<div class="{borderAll} lg:col-start-1 h-[60dvi] lg:h-[20dvi] col-span-4 lg:col-span-2">
+<div
+  class="{borderAll} lg:col-start-1 h-[60dvi] lg:h-[20dvi] col-span-4 lg:col-span-2"
+>
   <enhanced:img
     class="object-contain h-full mx-auto"
     src="$lib/images/invst/type.svg"
@@ -448,16 +540,20 @@
 </div>
 <div class="col-span-4 lg:col-span-3 grid grid-cols-2 lg:grid-cols-3">
   <Title
-      label="Portfolio / watch list"
-      text_size="h2"
-      sm_col_span="2"
-      lg_col_span="1"
-      height="h-[30dvi] lg:h-[10dvi]"
-      overide="lg:col-start-1"
-    />
-  <div class="col-span-2 lg:col-span-3 lg:col-start-1 grid  grid-cols-2 lg:grid-cols-3">
-    <div class="col-span-2 flex lg:flex-row flex-col {borderAll} h-[180dvi] lg:h-[30dvi] p-[5dvi] lg:p-[2dvi] space-x-[4dvi] lg:space-x-[1.5dvi] space-y-[4dvi] lg:space-y-[1.5dvi]">
-      <div class="space-y-[4dvi] lg:space-y-[1.5dvi]">
+    label="Portfolio / watch list"
+    text_size="h2"
+    sm_col_span="2"
+    lg_col_span="1"
+    height="h-[30dvi] lg:h-[10dvi]"
+    overide="lg:col-start-1"
+  />
+  <div
+    class="col-span-2 lg:col-span-3 lg:col-start-1 grid grid-cols-2 lg:grid-cols-3"
+  >
+    <div
+      class="col-span-2 flex lg:flex-row flex-col {borderAll} h-[180dvi] lg:h-[30dvi] p-[5dvi] lg:p-[2dvi] space-x-[4dvi] lg:space-x-[1.5dvi] space-y-[4dvi] lg:space-y-[1.5dvi]"
+    >
+      <div class="justify-between flex flex-col overflow-hidden">
         <div>
           <enhanced:img
             class="object-contain h-full mx-auto"
@@ -494,7 +590,6 @@
           alt="Type System"
         />
       </div>
-      
     </div>
     <div class="{borderAll} col-span-2 lg:col-span-1 h-[90dvi] lg:h-[30dvi]">
       <div class="h-full mx-auto overflow-hidden">
@@ -513,15 +608,17 @@
 </div>
 <div class="col-span-4 grid-cols-1 lg:col-span-3 grid lg:grid-cols-3">
   <Title
-      label="Discover"
-      text_size="h2"
-      sm_col_span="4"
-      lg_col_span="1"
-      height="h-[30dvi] lg:h-[10dvi]"
-      overide="lg:col-start-1"
-    />
+    label="Discover"
+    text_size="h2"
+    sm_col_span="4"
+    lg_col_span="1"
+    height="h-[30dvi] lg:h-[10dvi]"
+    overide="lg:col-start-1"
+  />
   <div class="lg:col-span-3 lg:col-start-1 grid lg:grid-cols-3">
-    <div class="col-span-2 flex flex-col {borderAll} h-[60dvi] lg:h-[30dvi] p-[5dvi] lg:p-[2dvi] space-y-[4dvi] lg:space-y-[1.5dvi]">
+    <div
+      class="col-span-2 flex flex-col {borderAll} h-[60dvi] lg:h-[30dvi] p-[5dvi] lg:p-[2dvi] space-y-[4dvi] lg:space-y-[1.5dvi]"
+    >
       <div class="flex space-x-[4dvi] lg:space-x-[1.5dvi]">
         <div>
           <enhanced:img
@@ -621,4 +718,3 @@
     alt="Type System"
   />
 </div>
-
