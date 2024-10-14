@@ -6,7 +6,7 @@
 </script>
 
 <a href="{link}"
-    class="block mt-[15dvi] lg:mt-[5dvi] col-span-2 before:content-[''] before:w-full before:h-full before:absolute relative before:border-[0px] before:border-stone-900 hover:before:border-[20px] hover:before:rounded-[40px]
+    class="block mt-[15dvi] lg:mt-[5dvi] col-span-2 before:content-[''] before:w-full before:h-full before:absolute relative before:border-[0px] before:border-stone-900 hover:before:border-[20px] hover:before:rounded-[0px]
     after:content-[''] after:w-full after:h-full after:absolute after:top-0 after:left-0 after:border-[0px] after:border-stone-900 hover:after:border-[20px] after:transition-all after:duration-200 before:transition-all before:duration-200"
   >
   <div class="{borderAll} relative block  bg-opacity-70  h-[60dvi] lg:h-[35dvi]">
