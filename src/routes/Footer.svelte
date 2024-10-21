@@ -7,6 +7,7 @@
     import Linkedin from "$lib/components/icons/linkedin.svelte";
     import Mail from "$lib/components/icons/mail.svelte";
     import Instagram from "$lib/components/icons/instagram.svelte";
+    import Github from "$lib/components/icons/github.svelte";
     import Behance from "$lib/components/icons/behance.svelte";
     import { writable } from 'svelte/store';
 
@@ -25,7 +26,7 @@
     
   }
 
-    let onClick = () => {
+    let onClick = (x) => {
         window.location = x
     };
     async function handleSubmit(e) {
@@ -95,6 +96,10 @@
         <ButtonSmall onClick={()=>{onClick("https://www.linkedin.com/in/kumar-satvik-8b35b8202/")}} mode="primary" invert={true} >
             <svelte:component this={Linkedin} />
         </ButtonSmall>
+        <ButtonSmall onClick={()=>{onClick("https://github.com/Krsatvik1")}} mode="primary" invert={true} >
+          <svelte:component this={Github} />
+      </ButtonSmall>
+      
         
       </div>
 </div>

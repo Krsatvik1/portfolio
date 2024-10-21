@@ -1,11 +1,14 @@
 <script>
   import WorkItem from "./WorkItem.svelte";
+  import Title from "$lib/components/Title.svelte";
   import IconBox from "$lib/components/IconBox.svelte";
   import brush from "$lib/components/icons/brush.svelte";
   import code from "$lib/components/icons/code.svelte";
   import research from "$lib/components/icons/research.svelte";
   import manager from "$lib/components/icons/manager.svelte";
-
+  import Eye from "$lib/components/icons/eye.svelte";
+  import Web from "$lib/components/icons/web.svelte";
+  import WebCode from "$lib/components/icons/webCode.svelte";
   import ai from "$lib/components/icons/ai.svelte";
   import { borderAll } from "$lib/commonClasses.js";
 </script>
@@ -13,6 +16,9 @@
 <svelte:head>
   <title>KUMAR SATVIK</title>
 </svelte:head>
+
+<Title label="Product Design / Development" text_size="h1" height="h-[45dvi] lg:h-[15dvi]" overide="mt-[30dvi] lg:mt-[10dvi] lg:col-span-4 col-span-4"/>
+
 <a
   href="/digital-intake-and-assessment-platform"
   class="col-span-4 mt-[15dvi] lg:mt-[5dvi] lg:grid-cols-2 grid group "
@@ -102,7 +108,7 @@
     </div>
     
   </div>
-  <div class="{borderAll} lg:h-[30dvi] h-[75dvi] order-1 lg:order-2">
+  <div class="{borderAll} lg:h-[30dvi] h-[75dvi] order-2 lg:order-2">
     <div class="h-full w-full overflow-hidden">
       <enhanced:img
       class="object-cover mx-auto group-hover:scale-[1.1] transition-all duration-200 h-full"
@@ -113,6 +119,7 @@
   </div>
 </a>
 
+<Title label="Web Development" text_size="h1" height="h-[45dvi] lg:h-[15dvi]" overide="mt-[30dvi] lg:mt-[10dvi] lg:col-span-4 col-span-4"/>
 <WorkItem
   label="Britinfotech"
   tags="Project Management / Web Development / Live"
@@ -131,6 +138,7 @@
   link="https://parthsuratwala.com/"
   img="parth"
 />
+<Title label="Visual Communication" text_size="h1" height="h-[45dvi] lg:h-[15dvi]" overide="mt-[30dvi] lg:mt-[10dvi] lg:col-span-4 col-span-4"/>
 <WorkItem
   label="Creative Coding - Designer's Guide"
   tags="Publication / Creative Coding / Classroom Assignment"
@@ -149,9 +157,4 @@
   link="https://www.behance.net/gallery/170368281/Ad-Concept-for-NOTO"
   img="adconcept"
 />
-<WorkItem
-  label="Intership @ Now Form"
-  tags="UI UX / Image Generation / Debugging"
-  link="/Summer_Intership_Report.pdf"
-  img="digital-intake-and-assessment-platform"
-/>
+
