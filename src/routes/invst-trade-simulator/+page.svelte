@@ -1,6 +1,7 @@
 <script>
   import { borderAll } from "$lib/commonClasses.js";
   import { onMount } from "svelte";
+  import Journey from "$lib/components/Journey.svelte";
   import Title from "$lib/components/Title.svelte";
   import Body from "$lib/components/Body.svelte";
   import Button from "$lib/components/Button.svelte";
@@ -9,6 +10,24 @@
   import discover from "$lib/images/invst/discover.webm";
   import portfolio from "$lib/images/invst/portfolio.webm";
   import reward from "$lib/images/invst/reward.webm";
+  import IconBox from "$lib/components/IconBox.svelte";
+  import brush from "$lib/components/icons/brush.svelte";
+  import research from "$lib/components/icons/research.svelte";
+  import help from "$lib/components/icons/help.svelte";
+  import route from "$lib/components/icons/route.svelte";
+  import font from "$lib/components/icons/font.svelte";
+  import color from "$lib/components/icons/color.svelte";
+  import learn from "$lib/components/icons/learn.svelte";
+
+  import chat from "$lib/components/icons/chat.svelte";
+  import megaphone from "$lib/components/icons/megaphone.svelte";
+  import building from "$lib/components/icons/building.svelte";
+  import alert2 from "$lib/components/icons/alert2.svelte";
+  import door from "$lib/components/icons/door.svelte";
+  import case1 from "$lib/components/icons/case1.svelte";
+  import gift from "$lib/components/icons/gift.svelte";
+  import map from "$lib/components/icons/map.svelte";
+  import security from "$lib/components/icons/security.svelte";
 
   let mob_index = 0;
   let wireframe_index = 0;
@@ -93,7 +112,14 @@
     </div>
   </div>
 </div>
-
+<div class="lg:mt-[5dvi] flex lg:hidden mt-[15dvi] w-fit col-span-2">
+  <IconBox>
+    <svelte:component this={research} />
+  </IconBox>
+  <IconBox>
+    <svelte:component this={brush} />
+  </IconBox>
+</div>
 <Title
   label="Roles"
   text_size="h2"
@@ -101,11 +127,19 @@
   lg_col_span="1"
   text_col="col-span-2 lg:col-span-1"
   height="h-[15dvi] lg:h-[5dvi]"
-  marginT={true}
+  overide="lg:mt-[5dvi]"
 />
-<div class="hidden lg:col-span-3 lg:block"></div>
+<div class="lg:mt-[5dvi] lg:flex hidden">
+  <IconBox>
+    <svelte:component this={research} />
+  </IconBox>
+  <IconBox>
+    <svelte:component this={brush} />
+  </IconBox>
+</div>
 <Body
-  label="I was involved in conducting user interviews and surveys to understand the target audience's needs and pain points. You also likely conducted competitive analysis, researching existing stock market platforms to identify opportunities for differentiation."
+  overide="lg:col-start-1"
+  label="I was involved in conducting user interviews and surveys to understand the target audience's needs and pain points. We conducted competitive analysis, researching existing stock market platforms to identify opportunities for differentiation."
   sm_col_span="4"
   lg_col_span="1"
   text_col="col-span-2 lg:col-span-1"
@@ -122,21 +156,85 @@
   headingText="Designer"
   height="h-[35dvi] lg:h-[15dvi]"
 />
+<div class="flex justify-end lg:col-start-1 mt-[15dvi] lg:mt-[5dvi] w-fit lg:w-auto">
+  <IconBox>
+    <svelte:component this={help} />
+  </IconBox>
+</div>
 
-<div class="hidden lg:col-span-1 lg:block"></div>
+<div
+  class="col-span-4 lg:col-span-1 h-[30dvi]  lg:h-[10dvi] {borderAll}  lg:mt-[5dvi] font-['ringold-sans'] text-h2_sm lg:text-h2_lg p-[5dvi] bg-white bg-opacity-70 lg:p-[2dvi] flex items-center"
+>
+  <p>Let’s Understand the Context</p>
+</div>
+<div
+  class="col-span-4 lg:col-span-2 h-[30dvi] lg:h-[10dvi] {borderAll}  lg:mt-[5dvi] text-base_sm lg:text-base_lg p-[5dvi] lg:p-[2dvi] flex items-center bg-white bg-opacity-70"
+>
+  <p>
+    Our INVST project emerged from a classroom assignment focused on identifying
+    a real-world problem and developing a digital solution. We observed that
+    young adults in India are increasingly interested in investing but often
+    lack the knowledge and confidence to do so effectively.
+  </p>
+</div>
+
+<div class=" lg:hidden mt-[30dvi]">
+  <IconBox>
+    <svelte:component this={route} />
+  </IconBox>
+</div>
+<Body
+  label="We conducted user research, interviews, and surveys to understand their needs and pain points, which guided our design process and shaped the app's features."
+  sm_col_span="4"
+  lg_col_span="1"
+  text_col="col-span-1 lg:col-span-1"
+  height="h-[30dvi] lg:h-[10dvi]"
+  align="content-center"
+  overide=" lg:mt-[10dvi]"
+/>
+<div class=" lg:mt-[10dvi] col-span-4 lg:col-span-1">
+  <div class="hidden lg:block">
+    <IconBox>
+      <svelte:component this={route} />
+    </IconBox>
+  </div>
+  <Title
+    label="Our RoadMap"
+    text_size="h2"
+    sm_col_span="4"
+    lg_col_span="1"
+    height="h-[15dvi] lg:h-[5dvi]"
+  />
+</div>
+<Journey
+  label="Problem Identification & Research"
+  step="1"
+  date="Sept 2nd - Sept 8th"
+  overide="lg:col-start-1"
+/>
+<Journey label="Persona Development & User Flows" step="2" date="Sept 9th - Sept 15th" overide="" />
+<Journey label="Design & Prototype" step="3" date="Sept 16th - Sept 22nd" overide="" />
+<Journey label="Finalization & Presentation" step="4" date="Sept 23rd - Oct 19th" overide="" />
+
+
+<div class="col-start-1 mt-[30dvi] lg:mt-[10dvi]">
+  <IconBox>
+    <svelte:component this={research} />
+  </IconBox>
+</div>
 <Title
   label="RESEARCH"
   text_size="h1"
   sm_col_span="4"
-  lg_col_span="3"
+  lg_col_span="2"
   height="h-[30dvi] lg:h-[10dvi]"
-  marginT={true}
+  overide="lg:col-start-1 bg-white bg-opacity-70"
 />
 
 <div
-  class="{borderAll} text-base_sm lg:text-base_lg lg:col-span-3 p-[5dvi] lg:p-[2dvi] gap-[5dvi] lg:gap-[2.5dvi] col-span-4 lg:h-[30dvi] h-[150dvi] grid grid-cols-1 lg:grid-cols-3 content-stretch"
+  class="{borderAll} text-base_sm lg:text-base_lg lg:col-span-2 p-[5dvi] lg:p-[2dvi] gap-[5dvi] lg:gap-[2.5dvi] col-span-4 lg:h-[10dvi] grid grid-cols-1 lg:grid-cols-1 content-stretch bg-white bg-opacity-70"
 >
-  <div class="flex flex-col">
+  <div class="flex flex-col w-full">
     <div>
       <div
         class="uppercase text-cap_sm lg:text-cap_lg font-bold mb-[2dvi] lg:mb-[0.5dvi]"
@@ -146,7 +244,7 @@
     </div>
 
     <ol
-      class="list-disc list-inside text-base_sm lg:text-base_lg font-bold space-y-[1dvi] lg:space-y-[0.5dvi] mt-[2dvi] lg:mt-0"
+      class="list-decimal list-inside text-base_sm lg:text-base_lg font-bold space-y-[1dvi] lg:space-y-[0.5dvi] mt-[2dvi] lg:mt-0 lg:columns-2 w-full"
     >
       <li>Defining the Problem</li>
       <li>Interviews</li>
@@ -156,43 +254,8 @@
       <li>Affinity Mapping</li>
     </ol>
   </div>
-  <div class="flex flex-col justify-between">
-    <div>
-      <div
-        class="uppercase text-cap_sm lg:text-cap_lg font-bold mb-[2dvi] lg:mb-[0.5dvi]"
-      >
-        Young adults in India Perspective
-      </div>
-      <p>
-        the target audience perspective emphasized the need for a user-friendly,
-        educational, and engaging platform that addressed their specific needs
-        and challenges. It highlighted the importance of providing guidance,
-        building confidence, and creating a supportive learning environment to
-        encourage participation in the stock market.
-      </p>
-    </div>
-  </div>
-
-  <div class="flex flex-col justify-between">
-    <div
-      class="justify-self-end text-base_sm lg:text-base_lg font-bold space-y-[1dvi] lg:space-y-[0.5dvi] mt-[2dvi] lg:mt-0"
-    >
-      <p>Motivated by Financial Gains</p>
-      <p>Frustrated by Complex Existing Solutions</p>
-      <p>Seeking Educational Resources</p>
-      <p>Drawn to Gamified and Engaging Learning</p>
-      <p>Seeking Opportunities for Growth</p>
-    </div>
-  </div>
 </div>
-<div class="grid col-span-4 lg:col-span-4 grid-cols-2 lg:grid-cols-4">
-  <div
-    class="{borderAll} text-cap_sm lg:text-cap_lg font-bold lg:col-span-2 p-[5dvi] lg:p-[2dvi] gap-[5dvi] lg:gap-[2.5dvi] col-span-2 lg:h-[10dvi] h-[30dvi] content-stretch"
-  >
-    "Young Indian adults (18-25) want to invest but lack knowledge and
-    confidence. Existing solutions are complex and intimidating, creating a need
-    for a user-friendly, gamified, and educational platform."
-  </div>
+<div class="grid col-span-4 lg:col-span-4 grid-cols-2 lg:grid-cols-4 mt-[15dvi] lg:mt-[5dvi]">
   <div class="lg:col-start-1 col-span-2 grid grid-cols-2">
     <Title
       label="Interview Insights"
@@ -201,20 +264,22 @@
       lg_col_span="1"
       sm_col_span="1"
     />
+    <div class="flex justify-start w-fit lg:w-auto">
+      <IconBox>
+        <svelte:component this={chat} />
+      </IconBox>
+    </div>
     <div
-      class="{borderAll} col-span-2 p-[5dvi] lg:p-[2dvi] flex flex-col gap-[4dvi] lg:gap-[1.5dvi] lg:h-[15dvi] h-[45dvi] text-base_sm lg:text-base_lg"
+      class="{borderAll} col-span-2 p-[5dvi] lg:p-[2dvi] flex flex-col gap-[4dvi] lg:gap-[1.5dvi] lg:h-[15dvi] h-[45dvi] text-cap_sm lg:text-cap_lg bg-white bg-opacity-70 justify-center"
     >
       <p>
-        "I'm really interested in investing, but I don't know where to start.
-        All the platforms I've seen are too complicated."
+        Lack of Knowledge & Entry Point
       </p>
       <p>
-        "I'm afraid of making mistakes and losing money. I don't want to invest
-        until I feel more confident."
+        Fear of Loss & Mistakes
       </p>
       <p>
-        "I wish there were more resources that explained things in a simpler
-        way, maybe with some games or interactive tools."
+        Desire for Simplified & Engaging Learning
       </p>
     </div>
   </div>
@@ -226,22 +291,27 @@
       lg_col_span="1"
       sm_col_span="1"
     />
+    <div class="flex justify-start w-fit lg:w-auto">
+      <IconBox>
+        <svelte:component this={megaphone} />
+      </IconBox>
+    </div>
     <div
-      class="{borderAll} col-span-2 p-[5dvi] lg:p-[2dvi] grid grid-cols-4 gap-[4dvi] lg:gap-[1.5dvi] lg:h-[15dvi] content-center h-[30dvi] text-base_sm lg:text-base_lg"
+      class="{borderAll} col-span-2 p-[5dvi] lg:p-[2dvi] grid grid-cols-4 gap-[4dvi] lg:gap-[1.5dvi] lg:h-[15dvi] content-center  text-base_sm lg:text-base_lg"
     >
-      <div>
+      <div class="col-span-2 lg:col-span-1">
         <p class="text-h2_sm lg:text-h2_lg font-['ringold-sans']">75%</p>
         <p>Age 18-19</p>
       </div>
-      <div>
+      <div class="col-span-2 lg:col-span-1">
         <p class="text-h2_sm lg:text-h2_lg font-['ringold-sans']">79%</p>
         <p>Allowance Dependence</p>
       </div>
-      <div>
+      <div class="col-span-2 lg:col-span-1">
         <p class="text-h2_sm lg:text-h2_lg font-['ringold-sans']">37%</p>
         <p>Learning to Manage Money</p>
       </div>
-      <div>
+      <div class="col-span-2 lg:col-span-1">
         <p class="text-h2_sm lg:text-h2_lg font-['ringold-sans']">44%</p>
         <p>Conscious Effort to Learn Finances</p>
       </div>
@@ -254,10 +324,15 @@
     lg_col_span="1"
     text_col="col-span-1 lg:col-span-1"
     height="h-[15dvi] lg:h-[5dvi]"
-    overide="lg:hidden"
+    overide="lg:col-start-3"
   />
+  <div class="flex justify-start w-fit lg:w-auto">
+    <IconBox>
+      <svelte:component this={building} />
+    </IconBox>
+  </div>
   <div
-    class="{borderAll} col-span-2 lg:col-span-3 p-[5dvi] lg:p-[2dvi] grid lg:grid-cols-3 gap-[4dvi] lg:gap-[1.5dvi] lg:h-[15dvi] content-center h-[75dvi] text-base_sm lg:text-base_lg"
+    class="{borderAll} col-span-2 lg:col-span-3 p-[5dvi] lg:p-[2dvi] grid lg:grid-cols-3 gap-[4dvi] lg:gap-[1.5dvi] lg:h-[15dvi] content-center h-[75dvi] text-base_sm lg:text-base_lg bg-white bg-opacity-70"
   >
     <div>
       <p class="text-h2_sm lg:text-h2_lg font-['ringold-sans']">MoneyBhai</p>
@@ -277,24 +352,54 @@
       <p>Not Specifically Youth-Targeted</p>
     </div>
   </div>
-  <Title
-    label="Competitive Analysis"
-    text_size="cap"
-    sm_col_span="1"
-    lg_col_span="1"
-    text_col="col-span-1 lg:col-span-1"
-    height="h-[15dvi] lg:h-[5dvi]"
-    overide="hidden lg:block"
-  />
 </div>
-
+<div class="flex lg:hidden justify-start w-fit lg:w-auto mt-[15dvi] lg:mt-[5dvi]">
+  <IconBox>
+    <svelte:component this={alert2} />
+  </IconBox>
+</div>
+<Title
+  label="Problem Statment"
+  text_size="h2"
+  sm_col_span="4"
+  lg_col_span="1"
+  height="h-[30dvi] lg:h-[10dvi]"
+  overide="lg:col-start-1  lg:mt-[5dvi]"
+/>
+<Body
+  label="Young Indian adults (18-25) want to invest but lack knowledge and confidence. Existing solutions are complex and intimidating, creating a need for a user-friendly, gamified, and educational platform."
+  sm_col_span="4"
+  lg_col_span="2"
+  text_col="col-span-2 lg:col-span-1"
+  height="h-[30dvi] lg:h-[10dvi]"
+  align="content-center"
+  overide="lg:mt-[5dvi]"
+/>
+<div class=" justify-start w-fit lg:w-auto mt-[15dvi] lg:mt-[5dvi] hidden lg:flex">
+  <IconBox>
+    <svelte:component this={alert2} />
+  </IconBox>
+</div>
+<div class="flex justify-start w-fit lg:w-auto mt-[15dvi] lg:mt-[5dvi]">
+  <IconBox>
+    <svelte:component this={brush} />
+  </IconBox>
+</div>
 <Title
   label="Design"
   text_size="h1"
   sm_col_span="4"
-  lg_col_span="3"
+  lg_col_span="2"
   height="h-[30dvi] lg:h-[10dvi]"
-  marginT={true}
+  overide="lg:col-start-1 bg-white bg-opacity-70"
+/>
+<Body
+  label="Our solution, INVST, is a user-friendly, gamified, and culturally-sensitive stock market simulation app designed specifically for young adults in India (18-25) with limited financial literacy. It aims to empower them to overcome their fear of the market and gain the confidence to invest for their future through interactive learning modules, virtual trading, and a supportive community."
+  sm_col_span="4"
+  lg_col_span="2"
+  text_col="col-span-2 lg:col-span-1"
+  height="h-[45dvi] lg:h-[10dvi]"
+  align="content-center"
 />
 <Title
   label="User Flows / Wireframes"
@@ -302,16 +407,29 @@
   height="h-[30dvi] lg:h-[5dvi]"
   lg_col_span="2"
   sm_col_span="4"
-  overide="lg:col-start-1"
+  overide="lg:col-start-1 mt-[15dvi] lg:mt-[5dvi]"
 />
+<div class="lg:hidden justify-start w-fit lg:w-auto mt-[15dvi] lg:mt-[5dvi] ">
+  <IconBox>
+    <svelte:component this={door} />
+  </IconBox>
+</div>
 <Title
   label="Onboarding"
   text_size="cap"
   height="h-[15dvi] lg:h-[5dvi]"
   lg_col_span="1"
   sm_col_span="4"
-  overide=""
+  overide="lg:col-start-1 lg:mt-[5dvi]"
 />
+<div class="{borderAll} h-[15dvi] lg:h-[5dvi] lg:mt-[5dvi] flex px-[5dvi] lg:px-[2dvi] text-base_sm lg:text-base_lg items-center col-span-4 lg:col-span-1">
+  <p>Welcome the user and set the stage for their investment journey.</p>
+</div>
+<div class="lg:flex justify-start w-fit lg:w-auto mt-[15dvi] lg:mt-[5dvi] hidden">
+  <IconBox>
+    <svelte:component this={door} />
+  </IconBox>
+</div>
 <div
   class="{borderAll} col-span-4 lg:col-span-4 flex-col justify-start items-start gap-[4dvi] lg:gap-[1.5dvi] inline-flex lg:h-[30dvi] h-[60dvi] w-full"
 >
@@ -323,50 +441,74 @@
     allowfullscreen
   ></iframe>
 </div>
-
-<div class="lg:col-span-4 grid lg:grid-cols-4 col-span-4">
-  <div class="lg:col-span-2 grid lg:grid-cols-2">
-    <Title
-      label="Portfolio / Watchlist"
-      text_size="cap"
-      height="h-[15dvi] lg:h-[5dvi]"
-      lg_col_span="1"
-      sm_col_span="4"
-      overide=""
-    />
-    <div
-      class="{borderAll} col-span-4 lg:col-span-4 flex-col justify-start items-start gap-[4dvi] lg:gap-[1.5dvi] inline-flex lg:h-[30dvi] h-[60dvi] w-full"
-    >
-      <iframe
-        style="border: 1px solid rgba(0, 0, 0, 0.1);"
-        width="100%"
-        height="100%"
-        src="https://embed.figma.com/board/hIrcIeT8r7jM06GJZv4K2K/Portfolio_Watchlist?node-id=0-1&embed-host=share"
-        allowfullscreen
-      ></iframe>
-    </div>
-  </div>
-  <div class="lg:col-span-2 grid lg:grid-cols-2">
-    <Title
-      label="Rewards"
-      text_size="cap"
-      height="h-[15dvi] lg:h-[5dvi]"
-      lg_col_span="1"
-      sm_col_span="4"
-      overide=""
-    />
-    <div
-      class="{borderAll} col-span-4 lg:col-span-4 flex-col justify-start items-start gap-[4dvi] lg:gap-[1.5dvi] inline-flex lg:h-[30dvi] h-[60dvi] w-full"
-    >
-      <iframe
-        style="border: 1px solid rgba(0, 0, 0, 0.1);"
-        width="100%"
-        height="100%"
-        src="https://embed.figma.com/board/EDENrf4UQ9VatoZs8JyiRF/Reward?node-id=0-1&embed-host=share"
-        allowfullscreen
-      ></iframe>
-    </div>
-  </div>
+<div class="lg:hidden justify-start w-fit lg:w-auto mt-[15dvi] lg:mt-[5dvi] ">
+  <IconBox>
+    <svelte:component this={case1} />
+  </IconBox>
+</div>
+<Title
+  label="Portfolio / Watchlist"
+  text_size="cap"
+  height="h-[15dvi] lg:h-[5dvi]"
+  lg_col_span="1"
+  sm_col_span="4"
+  overide="lg:col-start-1 lg:mt-[5dvi]"
+/>
+<div class="{borderAll} h-[15dvi] lg:h-[5dvi] lg:mt-[5dvi] flex px-[5dvi] lg:px-[2dvi] text-base_sm lg:text-base_lg items-center col-span-4 lg:col-span-1">
+  <p>A central hub for users to track their virtual investments and manage their watchlist.</p>
+</div>
+<div class="lg:flex justify-start w-fit lg:w-auto mt-[15dvi] lg:mt-[5dvi] hidden">
+  <IconBox>
+    <svelte:component this={case1} />
+  </IconBox>
+</div>
+<div
+  class="{borderAll} col-span-4 lg:col-span-4 flex-col justify-start items-start gap-[4dvi] lg:gap-[1.5dvi] inline-flex lg:h-[30dvi] h-[60dvi] w-full"
+>
+  <iframe
+    style="border: 1px solid rgba(0, 0, 0, 0.1);"
+    width="100%"
+    height="100%"
+    src="https://embed.figma.com/board/hIrcIeT8r7jM06GJZv4K2K/Portfolio_Watchlist?node-id=0-1&embed-host=share"
+    allowfullscreen
+  ></iframe>
+</div>
+<div class="lg:hidden justify-start w-fit lg:w-auto mt-[15dvi] lg:mt-[5dvi] ">
+  <IconBox>
+    <svelte:component this={gift} />
+  </IconBox>
+</div>
+<Title
+  label="Rewards"
+  text_size="cap"
+  height="h-[15dvi] lg:h-[5dvi]"
+  lg_col_span="1"
+  sm_col_span="4"
+  overide="lg:col-start-1 lg:mt-[5dvi]"
+/>
+<div class="{borderAll} h-[15dvi] lg:h-[5dvi] lg:mt-[5dvi] flex px-[5dvi] lg:px-[2dvi] text-base_sm lg:text-base_lg items-center col-span-4 lg:col-span-1">
+  <p>Motivate users to engage with the platform, complete modules, and achieve milestones.</p>
+</div>
+<div class="lg:flex justify-start w-fit lg:w-auto mt-[15dvi] lg:mt-[5dvi] hidden">
+  <IconBox>
+    <svelte:component this={gift} />
+  </IconBox>
+</div>
+<div
+  class="{borderAll} col-span-4 lg:col-span-4 flex-col justify-start items-start gap-[4dvi] lg:gap-[1.5dvi] inline-flex lg:h-[30dvi] h-[60dvi] w-full"
+>
+  <iframe
+    style="border: 1px solid rgba(0, 0, 0, 0.1);"
+    width="100%"
+    height="100%"
+    src="https://embed.figma.com/board/hIrcIeT8r7jM06GJZv4K2K/Portfolio_Watchlist?node-id=0-1&embed-host=share"
+    allowfullscreen
+  ></iframe>
+</div>
+<div class="lg:hidden justify-start w-fit lg:w-auto mt-[15dvi] lg:mt-[5dvi] ">
+  <IconBox>
+    <svelte:component this={map} />
+  </IconBox>
 </div>
 <Title
   label="Discovery"
@@ -374,10 +516,18 @@
   height="h-[15dvi] lg:h-[5dvi]"
   lg_col_span="1"
   sm_col_span="4"
-  overide=""
+  overide="lg:col-start-1 lg:mt-[5dvi]"
 />
+<div class="{borderAll} h-[15dvi] lg:h-[5dvi] lg:mt-[5dvi] flex px-[5dvi] lg:px-[2dvi] text-base_sm lg:text-base_lg items-center col-span-4 lg:col-span-1">
+  <p>A curated exploration of the stock market to expand knowledge and build confidence.</p>
+</div>
+<div class="lg:flex justify-start w-fit lg:w-auto mt-[15dvi] lg:mt-[5dvi] hidden">
+  <IconBox>
+    <svelte:component this={map} />
+  </IconBox>
+</div>
 <div
-  class="{borderAll} col-span-4 lg:col-span-4 flex-col justify-start items-start gap-[4dvi] lg:gap-[1.5dvi] inline-flex lg:h-[40dvi] h-[120dvi] w-full"
+  class="{borderAll} col-span-4 lg:col-span-4 flex-col justify-start items-start gap-[4dvi] lg:gap-[1.5dvi] inline-flex lg:h-[30dvi] h-[60dvi] w-full"
 >
   <iframe
     style="border: 1px solid rgba(0, 0, 0, 0.1);"
@@ -387,24 +537,48 @@
     allowfullscreen
   ></iframe>
 </div>
+
+
 <Title
   label="Design System"
   text_size="h2"
   sm_col_span="4"
   lg_col_span="1"
   height="h-[30dvi] lg:h-[10dvi]"
-  overide="lg:col-start-1"
-  marginT={true}
+  overide="lg:col-start-1 mt-[15dvi] lg:mt-[5dvi]"
 />
-
+<Body
+  label="To create a calming and welcoming experience for our psychologically sensitive clients, we crafted a design system that prioritized soft gradients, serene color palettes, and a clean, readable typeface. This approach ensured a visual language that fostered a sense of comfort and ease during the intake process."
+  sm_col_span="4"
+  lg_col_span="2"
+  text_col="col-span-2 lg:col-span-1"
+  height="h-auto lg:h-[10dvi]"
+  align="content-center"
+  overide="bg-white bg-opacity-70 lg:mt-[5dvi]"
+/>
+<div class="mt-[15dvi] lg:mt-[5dvi] flex col-start-1 w-fit lg:w-full">
+  <IconBox>
+    <svelte:component this={font} />
+  </IconBox>
+</div>
+<div class="mt-[15dvi] lg:mt-[5dvi] lg:flex hidden col-start-3 w-fit lg:w-full ">
+  <IconBox>
+    <svelte:component this={color} />
+  </IconBox>
+</div>
 <div
   class="{borderAll} lg:col-start-1 h-[60dvi] lg:h-[20dvi] col-span-4 lg:col-span-2"
 >
   <enhanced:img
-    class="object-contain h-full mx-auto"
+    class="object-contain h-full mx-auto bg-white bg-opacity-70"
     src="$lib/images/invst/type.svg"
     alt="Type System"
   />
+</div>
+<div class="mt-[15dvi] lg:mt-[5dvi]  lg:hidden col-start-1 w-fit lg:w-full ">
+  <IconBox>
+    <svelte:component this={color} />
+  </IconBox>
 </div>
 <div
   class="p-[5dvi] lg:p-[2dvi] col-span-4 lg:col-span-1 bg-[#1c1c1c] {borderAll} h-[60dvi] lg:h-[20dvi]"
@@ -452,57 +626,29 @@
     <p class="text-cap_sm lg:text-cap_lg font-bold text-black">#ff9447</p>
   </div>
 </div>
-
-<Title
+<div class="col-span-4 mt-[15dvi] lg:mt-[5dvi] lg:col-span-2 grid grid-cols-2  items-end content-end">
+  <div class=" flex w-fit lg:w-full justify-end lg:col-start-2">
+    <IconBox>
+      <svelte:component this={door} />
+    </IconBox>
+  </div>
+  <Title
   label="Onboarding"
   text_size="h2"
   sm_col_span="4"
   lg_col_span="1"
   height="h-[30dvi] lg:h-[10dvi]"
   overide="lg:col-start-1"
-  marginT={true}
 />
-<div class="col-span-3 hidden lg:block"></div>
-<div
-  class="col-span-4 lg:col-span-3 flex flex-row flex-wrap gap-[2dvi] lg:gap-[1.5dvi] {borderAll} p-[5dvi] lg:p-[2dvi] h-[240dvi] lg:h-[30dvi]"
->
-  <div>
-    <enhanced:img
-      class="object-contain h-full mx-auto"
-      src="$lib/images/invst/comp-1.svg"
-      alt="Type System"
-    />
-  </div>
-  <div>
-    <enhanced:img
-      class="object-contain h-full mx-auto"
-      src="$lib/images/invst/comp-2.svg"
-      alt="Type System"
-    />
-  </div>
-  <div>
-    <enhanced:img
-      class="object-contain h-full mx-auto"
-      src="$lib/images/invst/comp-3.svg"
-      alt="Type System"
-    />
-  </div>
-  <div>
-    <enhanced:img
-      class="object-contain h-full mx-auto"
-      src="$lib/images/invst/comp-4.svg"
-      alt="Type System"
-    />
-  </div>
-  <div>
-    <enhanced:img
-      class="object-contain h-full mx-auto"
-      src="$lib/images/invst/comp-5.svg"
-      alt="Type System"
-    />
-  </div>
+<Body
+  label="Welcome users to a world of possibilities! Engage them with energetic visuals that make learning about investing exciting and accessible."
+  sm_col_span="4"
+  lg_col_span="1"
+  text_col="col-span-2 lg:col-span-1"
+  height="h-[30dvi] lg:h-[10dvi]"
+/>
 </div>
-<div class="{borderAll} col-span-4 lg:col-span-1 h-[90dvi] lg:h-[30dvi]">
+<div class="{borderAll} lg:mt-[5dvi] col-span-4 lg:col-span-2 h-[120dvi] lg:h-[40dvi]">
   <div class="h-full mx-auto overflow-hidden">
     <video
       autoplay
@@ -515,16 +661,205 @@
     </video>
   </div>
 </div>
-<div class="col-span-4 lg:col-span-1">
+
+
+
+<div
+  class="col-span-4 lg:col-span-4 flex flex-row flex-wrap gap-[2dvi] lg:gap-[1.5dvi] justify-evenly {borderAll} p-[5dvi] lg:p-[2dvi]  lg:h-[35dvi]"
+>
+  <div class="lg:h-full">
+    <enhanced:img
+      class="object-contain h-full mx-auto"
+      src="$lib/images/invst/comp-1.svg"
+      alt="Type System"
+    />
+  </div>
+  <div class="lg:h-full">
+    <enhanced:img
+      class="object-contain h-full mx-auto"
+      src="$lib/images/invst/comp-2.svg"
+      alt="Type System"
+    />
+  </div>
+  <div class="lg:h-full">
+    <enhanced:img
+      class="object-contain h-full mx-auto"
+      src="$lib/images/invst/comp-3.svg"
+      alt="Type System"
+    />
+  </div>
+  <div class="lg:h-full">
+    <enhanced:img
+      class="object-contain h-full mx-auto"
+      src="$lib/images/invst/comp-4.svg"
+      alt="Type System"
+    />
+  </div>
+  <div class="lg:h-full">
+    <enhanced:img
+      class="object-contain h-full mx-auto"
+      src="$lib/images/invst/comp-5.svg"
+      alt="Type System"
+    />
+  </div>
+</div>
+
+
+<div class="col-span-4 lg:col-span-2 grid grid-cols-2 items-end content-end mt-[15dvi] lg:mt-[5dvi]">
+  <div class=" flex w-fit lg:w-full lg:col-start-2 justify-end">
+    <IconBox>
+      <svelte:component this={case1} />
+    </IconBox>
+  </div>
   <Title
-    label="Auth"
-    text_size="h2"
-    sm_col_span="4"
-    lg_col_span="1"
-    height="h-[30dvi] lg:h-[10dvi]"
-    overide="lg:col-start-1"
+  label="Portfolio / watch list"
+  text_size="h2"
+  sm_col_span="4"
+  lg_col_span="1"
+  height="h-[30dvi] lg:h-[10dvi]"
+  overide="lg:col-start-1"
+/>
+<Body
+  label="This is where users can confidently track their virtual investments and watchlist, building a sense of control and familiarity before transitioning to real-world trading."
+  sm_col_span="4"
+  lg_col_span="1"
+  text_col="col-span-2 lg:col-span-1"
+  height="h-[30dvi] lg:h-[10dvi]"
+/>
+</div>
+<div class="{borderAll} lg:mt-[5dvi] col-span-4 lg:col-span-2 h-[120dvi] lg:h-[40dvi]">
+  <div class="h-full mx-auto overflow-hidden">
+    <video
+      autoplay
+      muted
+      loop
+      class="mx-auto h-full overflow-hidden border-white border-2"
+    >
+      <source src={portfolio} type="video/webm" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+
+
+<div
+  class="col-span-4 lg:col-span-4 flex flex-row flex-wrap gap-[2dvi] lg:gap-[1.5dvi] justify-evenly {borderAll} p-[5dvi] lg:p-[2dvi]  lg:h-[40dvi]"
+>
+  <div class="lg:h-full lg:flex-initial flex-grow">
+    <enhanced:img
+      class="object-contain h-full mx-auto bg-black"
+      src="$lib/images/invst/comp-6.svg"
+      alt="Type System"
+    />
+  </div>
+  <div class="lg:h-full">
+    <enhanced:img
+      class="object-contain h-full mx-auto bg-black"
+      src="$lib/images/invst/comp-7.svg"
+      alt="Type System"
+    />
+  </div>
+  <div class="lg:h-full">
+    <enhanced:img
+      class="object-contain h-full mx-auto bg-black"
+      src="$lib/images/invst/comp-8.svg"
+      alt="Type System"
+    />
+  </div>
+</div>
+
+<div class="col-span-4 lg:col-span-2 grid grid-cols-2 items-end content-end">
+  <div class=" flex w-fit lg:w-full lg:col-start-2 justify-end">
+    <IconBox>
+      <svelte:component this={map} />
+    </IconBox>
+  </div>
+  <Title
+  label="Discovery"
+  text_size="h2"
+  sm_col_span="4"
+  lg_col_span="1"
+  height="h-[30dvi] lg:h-[10dvi]"
+  overide="lg:col-start-1"
+/>
+<Body
+  label="Dive into the world of investing! Explore curated modules that break down key concepts, guiding users through the fundamentals of the market with confidence."
+  sm_col_span="4"
+  lg_col_span="1"
+  text_col="col-span-2 lg:col-span-1"
+  height="h-[30dvi] lg:h-[10dvi]"
+/>
+</div>
+<div class="{borderAll} lg:mt-[5dvi] col-span-4 lg:col-span-2 h-[120dvi] lg:h-[40dvi]">
+  <div class="h-full mx-auto overflow-hidden">
+    <video
+      autoplay
+      muted
+      loop
+      class="mx-auto h-full overflow-hidden border-white border-2"
+    >
+      <source src={discover} type="video/webm" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+
+
+<div
+  class="col-span-4 lg:col-span-4 flex flex-row flex-wrap gap-[2dvi] lg:gap-[1.5dvi] justify-evenly {borderAll} p-[5dvi] lg:p-[2dvi]  lg:h-[40dvi]"
+>
+  <div class="lg:h-full">
+    <enhanced:img
+      class="object-contain h-full mx-auto bg-black"
+      src="$lib/images/invst/comp-11.svg"
+      alt="Type System"
+    />
+  </div>
+  <div class="lg:h-full">
+    <enhanced:img
+      class="object-contain h-full mx-auto bg-black"
+      src="$lib/images/invst/comp-12.svg"
+      alt="Type System"
+    />
+  </div>
+  <div class="lg:h-full">
+    <enhanced:img
+      class="object-contain h-full mx-auto bg-black"
+      src="$lib/images/invst/comp-13.svg"
+      alt="Type System"
+    />
+  </div>
+</div>
+<div
+  class="col-span-4 lg:col-span-4 flex flex-row flex-wrap gap-[2dvi] lg:gap-[1.5dvi] justify-evenly {borderAll} p-[5dvi] lg:p-[2dvi] h-full lg:h-[40dvi]"
+>
+<div class="lg:h-full">
+  <enhanced:img
+    class="object-contain h-full mx-auto bg-black"
+    src="$lib/images/invst/comp-16.svg"
+    alt="Type System"
   />
-  <div class="{borderAll} h-[90dvi] lg:h-[30dvi]">
+</div>
+  <div class="lg:h-full">
+    <enhanced:img
+      class="object-contain h-full mx-auto bg-black"
+      src="$lib/images/invst/comp-14.svg"
+      alt="Type System"
+    />
+  </div>
+  <div class="lg:h-full">
+    <enhanced:img
+      class="object-contain h-full mx-auto bg-black"
+      src="$lib/images/invst/comp-15.svg"
+      alt="Type System"
+    />
+  </div>
+  
+</div>
+<div class="col-span-4 lg:col-span-2 grid grid-cols-2">
+  <div class="{borderAll} mt-[15dvi] lg:mt-[5dvi] col-span-4 lg:col-span-2 h-[120dvi] lg:h-[40dvi]">
     <div class="h-full mx-auto overflow-hidden">
       <video
         autoplay
@@ -537,160 +872,22 @@
       </video>
     </div>
   </div>
-</div>
-<div class="col-span-4 lg:col-span-3 grid grid-cols-2 lg:grid-cols-3">
   <Title
-    label="Portfolio / watch list"
-    text_size="h2"
-    sm_col_span="2"
-    lg_col_span="1"
-    height="h-[30dvi] lg:h-[10dvi]"
-    overide="lg:col-start-1"
-  />
-  <div
-    class="col-span-2 lg:col-span-3 lg:col-start-1 grid grid-cols-2 lg:grid-cols-3"
-  >
-    <div
-      class="col-span-2 flex lg:flex-row flex-col {borderAll} h-[180dvi] lg:h-[30dvi] p-[5dvi] lg:p-[2dvi] space-x-[4dvi] lg:space-x-[1.5dvi] space-y-[4dvi] lg:space-y-[1.5dvi]"
-    >
-      <div class="justify-between flex flex-col overflow-hidden">
-        <div>
-          <enhanced:img
-            class="object-contain h-full mx-auto"
-            src="$lib/images/invst/comp-6.svg"
-            alt="Type System"
-          />
-        </div>
-        <div>
-          <enhanced:img
-            class="object-contain h-full mx-auto"
-            src="$lib/images/invst/comp-7.svg"
-            alt="Type System"
-          />
-        </div>
-        <div>
-          <enhanced:img
-            class="object-contain h-full mx-auto"
-            src="$lib/images/invst/comp-8.svg"
-            alt="Type System"
-          />
-        </div>
-        <div>
-          <enhanced:img
-            class="object-contain h-full mx-auto"
-            src="$lib/images/invst/comp-9.svg"
-            alt="Type System"
-          />
-        </div>
-      </div>
-      <div>
-        <enhanced:img
-          class="object-contain h-full mx-auto"
-          src="$lib/images/invst/comp-10.svg"
-          alt="Type System"
-        />
-      </div>
-    </div>
-    <div class="{borderAll} col-span-2 lg:col-span-1 h-[90dvi] lg:h-[30dvi]">
-      <div class="h-full mx-auto overflow-hidden">
-        <video
-          autoplay
-          muted
-          loop
-          class="mx-auto h-full overflow-hidden border-white border-2"
-        >
-          <source src={portfolio} type="video/webm" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="col-span-4 grid-cols-1 lg:col-span-3 grid lg:grid-cols-3">
-  <Title
-    label="Discover"
+    label="Auth"
     text_size="h2"
     sm_col_span="4"
     lg_col_span="1"
-    height="h-[30dvi] lg:h-[10dvi]"
+    height="h-[15dvi] lg:h-[5dvi]"
     overide="lg:col-start-1"
   />
-  <div class="lg:col-span-3 lg:col-start-1 grid lg:grid-cols-3">
-    <div
-      class="col-span-2 flex flex-col {borderAll} h-[60dvi] lg:h-[30dvi] p-[5dvi] lg:p-[2dvi] space-y-[4dvi] lg:space-y-[1.5dvi]"
-    >
-      <div class="flex space-x-[4dvi] lg:space-x-[1.5dvi]">
-        <div>
-          <enhanced:img
-            class="object-contain h-full mx-auto"
-            src="$lib/images/invst/comp-11.svg"
-            alt="Type System"
-          />
-        </div>
-        <div>
-          <enhanced:img
-            class="object-contain h-full mx-auto"
-            src="$lib/images/invst/comp-12.svg"
-            alt="Type System"
-          />
-        </div>
-        <div>
-          <enhanced:img
-            class="object-contain h-full mx-auto"
-            src="$lib/images/invst/comp-13.svg"
-            alt="Type System"
-          />
-        </div>
-      </div>
-      <div class="flex space-x-[4dvi] lg:space-x-[1.5dvi]">
-        <div>
-          <enhanced:img
-            class="object-contain h-full mx-auto"
-            src="$lib/images/invst/comp-14.svg"
-            alt="Type System"
-          />
-        </div>
-        <div>
-          <enhanced:img
-            class="object-contain h-full mx-auto"
-            src="$lib/images/invst/comp-15.svg"
-            alt="Type System"
-          />
-        </div>
-        <div>
-          <enhanced:img
-            class="object-contain h-full mx-auto"
-            src="$lib/images/invst/comp-16.svg"
-            alt="Type System"
-          />
-        </div>
-      </div>
-    </div>
-    <div class="{borderAll} col-span-2 lg:col-span-1 h-[90dvi] lg:h-[30dvi]">
-      <div class="h-full mx-auto overflow-hidden">
-        <video
-          autoplay
-          muted
-          loop
-          class="mx-auto h-full overflow-hidden border-white border-2"
-        >
-          <source src={discover} type="video/webm" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </div>
+  <div class=" flex w-fit lg:w-full lg:col-start-2 justify-start">
+    <IconBox>
+      <svelte:component this={security} />
+    </IconBox>
   </div>
 </div>
-<div class="col-span-4 lg:col-span-1">
-  <Title
-    label="Reward"
-    text_size="h2"
-    sm_col_span="4"
-    lg_col_span="1"
-    height="h-[30dvi] lg:h-[10dvi]"
-    overide="lg:col-start-1"
-  />
-  <div class="{borderAll} h-[90dvi] lg:h-[30dvi]">
+<div class="col-span-4 lg:col-span-2 grid grid-cols-2">
+  <div class="{borderAll} mt-[15dvi] lg:mt-[5dvi] col-span-4 lg:col-span-2 h-[120dvi] lg:h-[40dvi]">
     <div class="h-full mx-auto overflow-hidden">
       <video
         autoplay
@@ -703,18 +900,52 @@
       </video>
     </div>
   </div>
+  <Title
+    label="Reward"
+    text_size="h2"
+    sm_col_span="4"
+    lg_col_span="1"
+    height="h-[15dvi] lg:h-[5dvi]"
+    overide="lg:col-start-1"
+  />
+  <div class=" flex w-fit lg:w-full lg:col-start-2 justify-start">
+    <IconBox>
+      <svelte:component this={gift} />
+    </IconBox>
+  </div>
 </div>
-<div class="col-span-4 lg:col-span-2 {borderAll} h-">
+
+
+
+
+<div class="col-span-4 lg:col-span-2 mt-[15dvi] lg:mt-[5dvi] {borderAll} h-">
   <enhanced:img
     class="object-contain h-full mx-auto"
     src="$lib/images/invst/mockup-1.jpg"
     alt="Type System"
   />
 </div>
-<div class="col-span-4 lg:col-span-2 {borderAll}">
+<div class="col-span-4 lg:col-span-2 mt-[15dvi] lg:mt-[5dvi] {borderAll}">
   <enhanced:img
     class="object-contain h-full mx-auto"
     src="$lib/images/invst/mockup-2.jpg"
     alt="Type System"
   />
 </div>
+
+<div class="mt-[30dvi] lg:mt-[10dvi] flex justify-end w-fit lg:w-full">
+  <IconBox>
+    <svelte:component this={learn} />
+  </IconBox>
+</div>
+<Body
+  label="This project taught us the power of user-centered design. By listening to the anxieties and aspirations of young Indian investors, we realized that building confidence and knowledge was key to unlocking their potential. INVST became more than just an app— it became a gateway to financial empowerment, proving that learning can be both engaging and effective."
+  sm_col_span="4"
+  lg_col_span="2"
+  align="content-center"
+  
+  text_col="col-span-2 lg:col-span-1"
+  height="h-auto lg:h-[10dvi]"
+  overide="lg:mt-[10dvi]"
+/>
+

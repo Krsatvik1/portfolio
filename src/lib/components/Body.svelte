@@ -10,6 +10,7 @@
     height = "h-[10dvi] lg:h-[30dvi]",
     marginT = false,
     text_size = "base",
+    align = "content-start",
     overide = "";
 </script>
 
@@ -19,7 +20,7 @@
     : ''} {overide} "
 >
   <div
-    class="p-[5dvi] lg:p-[2dvi] h-full justify-start text-{text_size}_sm lg:text-{text_size}_lg {text_size ==
+    class="p-[5dvi] lg:p-[2dvi] h-full {align} text-{text_size}_sm lg:text-{text_size}_lg {text_size ==
     'cap'
       ? 'font-bold'
       : ''} {text_col} {text_size == 'h1'

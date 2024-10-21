@@ -1,21 +1,4 @@
-
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 92 92">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: none;
-      }
-    </style>
-  </defs>
-  <!-- Generator: Adobe Illustrator 28.7.1, SVG Export Plug-In . SVG Version: 1.2.0 Build 142)  -->
-  <g>
-    <g  id="Layer_1">
-      <path  class="cls-1" d="M0,0h91.6v91.6H0V0Z"/>
-      <g fill="currentColor">
-        <path d="M38.3,43.7s7.4-.6,7.4-9.4-5-13.2-12.7-13.2H6.7s0,48.8,0,48.8h26.9s13.4.4,13.4-14.7c0,0,1-11.6-8.8-11.6ZM16.5,28.3h13.4s4.6,0,4.6,6-4.6,6.2-4.6,6.2h-13.4v-12.2ZM31.1,62.6h-14.7v-14.7h14.7s7.3,0,7.3,7.3-6.3,7.3-7.3,7.3Z"/>
-        <path d="M67.8,33.2c-18.4,0-18.3,18.3-18.3,18.3,0,0-1.2,18.3,18.3,18.3,0,0,17.1,0,17.1-14.7h-9.8s0,7.3-7.3,7.3c0,0-7.3,0-7.3-9.8h24.4c0-4.9,0-19.5-17.1-19.5ZM60.5,47.9s-.2-7.3,7.3-7.3,7.3,7.3,7.3,7.3h-14.7Z"/>
-        <path d="M77.6,25.9h-19.5v4.9h19.5v-4.9Z"/>
-      </g>
-    </g>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+  <path d="M2 12H7.625M7.4 5H4C3.05719 5 2.58579 5 2.29289 5.29289C2 5.58579 2 6.05719 2 7V17C2 17.9428 2 18.4142 2.29289 18.7071C2.58579 19 3.05719 19 4 19H7.4C9.38823 19 11 17.433 11 15.5C11 13.567 9.38823 12 7.4 12C9.38823 12 11 10.433 11 8.5C11 6.567 9.38823 5 7.4 5Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M20 7H16M14 14H22C22 11.9587 20.2091 10 18 10C15.7909 10 14 11.9587 14 14ZM14 14V15C14 17.2091 15.7909 19 18 19C19.4806 19 20.7733 18.1956 21.4649 17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
 </svg>
