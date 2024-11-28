@@ -134,7 +134,7 @@
 <ToolItem label="Open router" lg_col_span=1 sm_col_span=4 text_size="cap" overide=""/>
 <ToolItem label="Google Gemini" lg_col_span=1 sm_col_span=4 text_size="cap" overide=""/>
 
-<div class="lg:mt-[5dvi] flex items-end mt-[15dvi] w-fit lg:w-auto col-span-4 lg:col-span-2">
+<div class="lg:mt-[5dvi] flex items-end mt-[15dvi] w-fit lg:w-auto col-span-4 lg:col-span-4">
   <IconBox>
     <svelte:component this={server} />
   </IconBox>

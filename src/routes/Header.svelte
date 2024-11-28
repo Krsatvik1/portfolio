@@ -9,7 +9,7 @@
     class="px-[5dvi] lg:px-[2dvi] lg:max-w-[70dvi] flex-col justify-center h-full items-start gap-[4dvi] lg:gap-[1.5dvi] inline-flex"
   >
     <div class=" text-stone-900 text-cap_sm lg:text-cap_lg font-bold uppercase">
-      Visual Designer / UX engineer
+      Visual Designer / UX Developer
     </div>
     <div
       class=" text-stone-900 pt-[0.7dvi] text-h1_sm relative lg:text-h1_lg font-normal font-['ringold-sans']" style="text-wrap:wrap"

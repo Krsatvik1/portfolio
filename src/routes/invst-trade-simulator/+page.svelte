@@ -55,7 +55,7 @@
       class="flex-col p-[5dvi] pb-0 lg:px-[2dvi] justify-center gap-[4dvi] lg:gap-[1.5dvi] flex col-span-2 lg:col-span-3"
     >
       <div class="text-cap_sm lg:text-cap_lg font-bold uppercase">
-        UI UX / MOBILE APP / CLASSROOM ASSIGNMENT
+        MOBILE APP / UI Animation / CLASSROOM ASSIGNMENT
       </div>
       <div class="text-h1_sm lg:text-h1_lg font-['ringold-sans']">
         INVST: TRADE SIMULATOR
@@ -931,6 +931,9 @@
     src="$lib/images/invst/mockup-2.jpg"
     alt="Type System"
   />
+</div>
+<div class="col-span-4 lg:col-span-4 mt-[15dvi] lg:mt-[5dvi] {borderAll}">
+  <iframe title="prototype" class="h-[800px] lg:h-[1100px] w-full" src="https://embed.figma.com/proto/nglRc5zHddZYOyaHvhZ4MA/UX_Course_Sem5?page-id=388%3A1716&node-id=388-2746&node-type=frame&viewport=739%2C786%2C0.2&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=388%3A2746&embed-host=share" allowfullscreen></iframe>
 </div>
 
 <div class="mt-[30dvi] lg:mt-[10dvi] flex justify-end w-fit lg:w-full">
