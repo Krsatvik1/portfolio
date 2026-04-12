@@ -160,7 +160,7 @@
         <div
           class=" text-stone-900 pt-[0.7dvi] text-h1_sm lg:text-h1_lg font-normal font-['ringold-sans']"
         >
-          DIGITALs INTAKEs ANDs ASSESSMENTs PLATFORMs
+          DIGITAL INTAKE AND ASSESSMENT PLATFORM
         </div>
         <div
           class=" text-stone-900 text-cap_sm lg:text-cap_lg font-bold uppercase"
