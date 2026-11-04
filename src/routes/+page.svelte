@@ -106,6 +106,10 @@
 
 <svelte:head>
   <title>KUMAR SATVIK</title>
+  <meta name="description" content="Kumar Satvik designs and builds websites and digital products." />
+  <meta property="og:title" content="Kumar Satvik" />
+  <meta property="og:description" content="Kumar Satvik designs and builds websites and digital products." />
+  <meta property="og:url" content="https://www.krsatvik.xyz/" />
 </svelte:head>
 
 <Title
