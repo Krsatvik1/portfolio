@@ -74,6 +74,7 @@
     };
   }
 
+  const blownInteraction = createMouseInteraction();
   const digitalIntakeInteraction = createMouseInteraction();
   const invstTradeInteraction = createMouseInteraction();
   const britInfotechInteraction = createMouseInteraction();
@@ -84,6 +85,8 @@
   const adConceptInteraction = createMouseInteraction();
   const vrInteraction = createMouseInteraction();
 
+  let blownSectionRef;
+  let blownAnimateRef;
   let digitalIntakeSectionRef;
   let digitalIntakeAnimateRef;
   let invstTradeSectionRef;
@@ -119,6 +122,77 @@
   overide="mt-[30dvi] lg:mt-[10dvi] lg:col-span-4 col-span-4"
 />
 
+<a
+  href="/blown"
+  bind:this={blownSectionRef}
+  on:mouseover={() => {
+    blownInteraction.mouseover();
+    blownInteraction.bind(blownSectionRef, blownAnimateRef);
+  }}
+  on:mouseout={blownInteraction.mouseout}
+  on:mousemove={blownInteraction.mousemove}
+  on:focus={blownInteraction.mouseover}
+  on:blur={blownInteraction.mouseover}
+  class="col-span-4 mt-[15dvi] lg:mt-[5dvi] lg:grid-cols-2 grid group"
+>
+  <div class="order-2 lg:order-1">
+    <div class="flex w-full justify-end">
+      <IconBox>
+        <svelte:component this={research} />
+      </IconBox>
+      <IconBox>
+        <svelte:component this={brush} />
+      </IconBox>
+      <IconBox>
+        <svelte:component this={code} />
+      </IconBox>
+    </div>
+    <div
+      class="{borderAll} relative block bg-opacity-70 h-[60dvi] lg:h-[25dvi] bg-white"
+    >
+      <div
+        class="bg-black h-full transition-all z-0 duration-500 w-full absolute bottom-0 left-0"
+      ></div>
+      <div
+        bind:this={blownAnimateRef}
+        class="px-[5dvi] lg:px-[2dvi] max-w-[80dvi] flex-col justify-center h-full items-start gap-[4dvi] lg:gap-[1.5dvi] inline-flex relative z-10 bg-white"
+      >
+        <div
+          class=" text-stone-900 text-cap_sm lg:text-cap_lg font-bold uppercase"
+        >
+          2026
+        </div>
+        <div
+          class=" text-stone-900 pt-[0.7dvi] text-h1_sm lg:text-h1_lg font-normal font-['ringold-sans']"
+        >
+          BLOWN: FOUR SALONS, ONE SITE
+        </div>
+        <div
+          class=" text-stone-900 text-cap_sm lg:text-cap_lg font-bold uppercase"
+        >
+          Website / CMS / Analytics / Live
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="{borderAll} lg:h-[30dvi] h-[75dvi] order-2 lg:order-2 bg-white">
+    <div class="h-full w-full overflow-hidden flex items-center justify-center">
+      <!-- the live site in a hairline laptop, drawn like the story on /blown -->
+      <div class="w-[78%] lg:w-[68%] group-hover:scale-[1.06] transition-all duration-200">
+        <div class="border border-stone-900 border-b-0 rounded-t-[1.6dvi] lg:rounded-t-[0.7dvi] p-[2dvi] pb-[2.4dvi] lg:p-[0.7dvi] lg:pb-[0.9dvi] bg-white">
+          <enhanced:img
+            class="block w-full h-auto border border-stone-900"
+            src="$lib/images/blown/cover.jpg"
+            alt="Blown home page"
+          />
+        </div>
+        <div class="relative -mx-[3.2%] h-[2dvi] lg:h-[0.8dvi] border border-stone-900 rounded-b-[1.6dvi] lg:rounded-b-[0.7dvi] bg-white">
+          <span class="absolute left-1/2 -translate-x-1/2 -top-px w-[14%] h-[45%] border border-t-0 border-stone-900 rounded-b-[0.6dvi]"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</a>
 <a
   href="/digital-intake-and-assessment-platform"
   bind:this={digitalIntakeSectionRef}
