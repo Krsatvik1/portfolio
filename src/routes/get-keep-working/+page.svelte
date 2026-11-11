@@ -19,7 +19,6 @@
     image: "https://www.krsatvik.xyz/keep-working/og.jpg",
     author: { "@type": "Person", name: "Kumar Satvik", url: "https://www.krsatvik.xyz" },
   };
-  const CMD = 'xattr -dr com.apple.quarantine "/Applications/Keep Working.app"';
 
   const states = [
     { clip: "working", name: "Working" },
@@ -28,14 +27,6 @@
     { clip: "done", name: "Done" },
   ];
 
-  let copied = false;
-  async function copy() {
-    try {
-      await navigator.clipboard.writeText(CMD);
-      copied = true;
-      setTimeout(() => (copied = false), 1600);
-    } catch {}
-  }
 </script>
 
 <svelte:head>
@@ -93,11 +84,6 @@
     <h2>How to install</h2>
     <!-- svelte-ignore a11y-media-has-caption -->
     <video src="/keep-working/install.mp4" poster="/keep-working/install-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
-    <div class="cmd">
-      <span>Or skip steps 2–3 in Terminal</span>
-      <code>{CMD}</code>
-      <button type="button" on:click={copy}>{copied ? "Copied" : "Copy"}</button>
-    </div>
   </section>
 
   <footer class="end">
@@ -154,24 +140,11 @@
   h2 { font-size: 15px; font-weight: 600; color: var(--mute); margin: 0 0 14px; letter-spacing: 0; }
   .install video { aspect-ratio: 16 / 9; border-radius: 16px; background: #ddd7cf; }
 
-  .cmd { display: flex; align-items: center; gap: 12px; margin-top: 16px; flex-wrap: wrap; font-size: 13px; color: var(--mute); }
-  .cmd code {
-    flex: 1; min-width: 0; overflow-x: auto; white-space: nowrap; color: var(--ink);
-    background: #e3ded6; border-radius: 8px; padding: 8px 12px; font-size: 12.5px;
-  }
-  .cmd button {
-    border: 0; background: var(--ink); color: var(--paper); font: inherit; font-size: 13px; font-weight: 600;
-    padding: 8px 14px; border-radius: 8px;
-  }
-
   .end { max-width: 1200px; margin: clamp(80px, 10vw, 140px) auto 0; display: grid; justify-items: center; gap: 18px; }
   .by { font-size: 13px; color: var(--mute); text-decoration: none; }
   .by:hover { color: var(--ink); }
 
   @media (max-width: 800px) {
     .states { grid-template-columns: repeat(2, 1fr); gap: 14px; }
-  }
-  @media (max-width: 600px) {
-    .cmd span { width: 100%; }
   }
 </style>
