@@ -69,42 +69,16 @@
     <h2>Set it up in a minute</h2>
     <p class="small">It isn't from the App Store, so macOS asks you to allow it once.</p>
 
-    <ol>
-      <li>
-        <div class="pic shot"><img src="/keep-working/step-1.jpg" alt="Finder showing Keep Working in Downloads, with Applications in the sidebar" /></div>
-        <p><b>Unzip it</b> and drag Keep Working into Applications.</p>
-      </li>
+    <div class="howto">
+      <!-- svelte-ignore a11y-media-has-caption -->
+      <video src="/keep-working/install.mp4" poster="/keep-working/install-poster.jpg" autoplay muted loop playsinline controls preload="metadata"></video>
+    </div>
 
-      <li>
-        <div class="pic">
-          <div class="alert">
-            <img src="/keep-working/icon.png" alt="" />
-            <b>“Keep Working” Not Opened</b>
-            <span>Apple could not verify it is free of malware.</span>
-            <div class="row"><i>Move to Trash</i><i class="hit">Done</i></div>
-          </div>
-        </div>
-        <p><b>Open it.</b> macOS stops it the first time. Click Done.</p>
-      </li>
-
-      <li>
-        <div class="pic">
-          <div class="settings">
-            <div class="side"><i></i><i></i><i class="on">Privacy & Security</i><i></i></div>
-            <div class="pane">
-              <b>Security</b>
-              <span>“Keep Working” was blocked to protect your Mac.</span>
-              <i class="hit">Open Anyway</i>
-            </div>
-          </div>
-        </div>
-        <p><b>System Settings, Privacy & Security.</b> Scroll down, click Open Anyway, and confirm.</p>
-      </li>
-
-      <li>
-        <div class="pic shot"><img src="/keep-working/step-4.jpg" alt="The desktop's right-click menu with Edit Widgets highlighted" /></div>
-        <p><b>Right-click the desktop,</b> choose Edit Widgets, find Keep Working, and pick a size.</p>
-      </li>
+    <ol class="steps">
+      <li><b>Unzip it</b> and drag Keep Working into Applications.</li>
+      <li><b>Open it.</b> macOS stops it the first time. Click Done.</li>
+      <li><b>System Settings, Privacy &amp; Security.</b> Click Open Anyway, confirm, then Touch ID or your password.</li>
+      <li><b>Right-click the desktop,</b> choose Edit Widgets, find Keep Working, and pick a size.</li>
     </ol>
 
     <div class="alt">
@@ -183,57 +157,15 @@
 
   .setup { max-width: 1200px; margin: 120px auto 0; }
   h2 { font-size: clamp(30px, 4vw, 44px); letter-spacing: -0.03em; line-height: 1.05; margin: 0; font-weight: 700; }
-  .setup ol {
-    list-style: none; padding: 0; margin: 40px 0 0; counter-reset: step;
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+  .howto { margin-top: 36px; }
+  .howto video { display: block; width: 100%; aspect-ratio: 16 / 9; border-radius: 14px; background: #e3ded6; }
+  .steps {
+    list-style: none; padding: 0; margin: 28px 0 0; counter-reset: step;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
   }
-  .setup li { counter-increment: step; }
-  .setup li p { margin: 14px 0 0; font-size: 15px; color: var(--mute); }
-  .setup li p b { color: var(--ink); font-weight: 600; }
-  .setup li p::before { content: counter(step) "  "; color: var(--clay); font-weight: 700; }
-
-  .pic {
-    aspect-ratio: 4 / 3; border-radius: 12px; background: #e3ded6;
-    display: grid; place-items: center; overflow: hidden; padding: 16px;
-    font-size: 12px; line-height: 1.3;
-  }
-  .pic.shot { padding: 12px; }
-  .pic.shot img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.35); }
-  .hit { background: var(--clay) !important; color: #fff !important; box-shadow: 0 0 0 4px rgba(217, 119, 87, 0.25); }
-  .pic i { font-style: normal; }
-
-  .drag { display: flex; align-items: center; gap: 10px; }
-  .file { display: grid; justify-items: center; gap: 6px; width: 72px; text-align: center; }
-  .file img { width: 56px; height: 56px; }
-  .folder { width: 56px; height: 46px; margin: 5px 0; border-radius: 6px; background: linear-gradient(#6cb6f2, #3f95e0); position: relative; }
-  .folder::before { content: ""; position: absolute; left: 0; top: -6px; width: 24px; height: 10px; border-radius: 4px 4px 0 0; background: #6cb6f2; }
-  .arrow { width: 44px; color: var(--clay); }
-
-  .alert {
-    width: 200px; background: #f7f5f2; border-radius: 12px; padding: 16px; text-align: center;
-    display: grid; justify-items: center; gap: 6px; box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.3);
-  }
-  .alert img { width: 40px; height: 40px; }
-  .alert span { color: var(--mute); font-size: 11px; }
-  .alert .row { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; width: 100%; margin-top: 6px; }
-  .alert .row i { background: #e4e0db; border-radius: 6px; padding: 5px 0; }
-
-  .settings {
-    width: 100%; height: 100%; display: grid; grid-template-columns: 34% 1fr;
-    background: #f7f5f2; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.3);
-  }
-  .side { background: #e9e6e1; padding: 10px 6px; display: grid; align-content: start; gap: 6px; }
-  .side i { height: 12px; border-radius: 4px; background: #d8d3cc; }
-  .side i.on { height: auto; padding: 4px 6px; background: #3f95e0; color: #fff; font-size: 10px; }
-  .pane { padding: 12px; display: grid; align-content: center; gap: 8px; justify-items: start; }
-  .pane span { color: var(--mute); font-size: 11px; }
-  .pane i { padding: 5px 10px; border-radius: 6px; }
-
-  .menu {
-    width: 170px; background: rgba(247, 245, 242, 0.95); border-radius: 10px; padding: 6px;
-    display: grid; gap: 2px; box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.3);
-  }
-  .menu i { padding: 5px 8px; border-radius: 5px; }
+  .steps li { counter-increment: step; font-size: 15px; color: var(--mute); }
+  .steps li b { color: var(--ink); font-weight: 600; }
+  .steps li::before { content: counter(step) "  "; color: var(--clay); font-weight: 700; }
 
   .alt { margin-top: 36px; max-width: 640px; }
   .cmd { display: flex; align-items: center; gap: 8px; margin-top: 10px; background: #e3ded6; border-radius: 10px; padding: 6px 6px 6px 14px; }
@@ -250,7 +182,7 @@
   .small-button { padding: 10px 18px; font-size: 14px; }
 
   @media (max-width: 900px) {
-    .setup ol, .states { grid-template-columns: repeat(2, 1fr); }
+    .steps, .states { grid-template-columns: repeat(2, 1fr); }
   }
   @media (max-width: 700px) {
     .kw { font-size: 16px; }
@@ -258,16 +190,8 @@
     .cta { text-align: left; margin-top: 20px; }
     .states { gap: 20px 12px; margin-top: 64px; }
     .states figcaption { font-size: 14px; }
-    .setup ol { gap: 20px 12px; }
-    .setup li p { font-size: 14px; }
-    .pic { aspect-ratio: 1; padding: 10px; font-size: 10px; }
-    .alert, .menu { width: 100%; padding: 10px; }
-    .alert img { width: 28px; height: 28px; }
-    .file { width: 56px; }
-    .file img { width: 40px; height: 40px; }
-    .folder { width: 40px; height: 33px; }
-    .arrow { width: 24px; }
-    .drag { gap: 4px; }
+    .steps { grid-template-columns: 1fr; gap: 10px; }
+    .steps li { font-size: 14px; }
     .setup, .end { margin-top: 80px; }
   }
 </style>
