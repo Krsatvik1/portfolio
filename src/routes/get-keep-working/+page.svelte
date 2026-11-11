@@ -4,6 +4,21 @@
   // Media in static/keep-working, rendered from the widget's views (Tools/Film.swift, Tools/InstallFilm.swift).
   const DOWNLOAD = "https://github.com/Krsatvik1/keep-working/releases/latest/download/KeepWorking.dmg";
   const REPO = "https://github.com/Krsatvik1/keep-working";
+  const URL = "https://www.krsatvik.xyz/get-keep-working";
+  const OG = "https://www.krsatvik.xyz/keep-working/og.jpg";
+  const LD = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Keep Working",
+    description: "A macOS desktop widget that shows your Claude Code sessions live.",
+    applicationCategory: "DeveloperApplication",
+    operatingSystem: "macOS 14 or later",
+    offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+    downloadUrl: "https://github.com/Krsatvik1/keep-working/releases/latest/download/KeepWorking.dmg",
+    codeRepository: "https://github.com/Krsatvik1/keep-working",
+    image: "https://www.krsatvik.xyz/keep-working/og.jpg",
+    author: { "@type": "Person", name: "Kumar Satvik", url: "https://www.krsatvik.xyz" },
+  };
   const CMD = 'xattr -dr com.apple.quarantine "/Applications/Keep Working.app"';
 
   const states = [
@@ -24,12 +39,25 @@
 </script>
 
 <svelte:head>
-  <title>Keep Working</title>
-  <meta name="description" content="Your Claude sessions, on your Mac desktop. Open source." />
+  <title>Keep Working: your Claude sessions on your Mac desktop</title>
+  <meta name="description" content="A free, open-source macOS widget that shows your Claude Code sessions live on your desktop: working, a new image, needs you, done. One click opens the chat." />
+  <link rel="canonical" href={URL} />
+  <link rel="icon" type="image/png" href="/keep-working/icon.png" />
+  <link rel="apple-touch-icon" href="/keep-working/icon.png" />
+  <meta name="theme-color" content="#eeeae4" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={URL} />
   <meta property="og:title" content="Keep Working" />
-  <meta property="og:description" content="Your Claude sessions, on your Mac desktop. Open source." />
-  <meta property="og:image" content="https://www.krsatvik.xyz/keep-working/poster.jpg" />
+  <meta property="og:description" content="Your Claude sessions, on your Mac desktop. Open source, macOS 14+." />
+  <meta property="og:image" content={OG} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Keep Working: a Mac desktop widget showing a Claude session that needs you" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Keep Working" />
+  <meta name="twitter:description" content="Your Claude sessions, on your Mac desktop. Open source, macOS 14+." />
+  <meta name="twitter:image" content={OG} />
+  {@html `<script type="application/ld+json">${JSON.stringify(LD)}</script>`}
 </svelte:head>
 
 <main class="kw">

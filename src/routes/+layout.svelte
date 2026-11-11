@@ -105,6 +105,20 @@
     });
   });
 </script>
+<!-- The site's default icon and link preview. Pages that stand on their own (bare) set their own, so a crawler
+     never meets two og:image tags and picks the site's. -->
+<svelte:head>
+  {#if !bare}
+    <link rel="icon" href="/favicon.ico" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.krsatvik.xyz/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Kumar Satvik" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://www.krsatvik.xyz/og.jpg" />
+  {/if}
+</svelte:head>
 {#if bare}
 <slot />
 {:else}
