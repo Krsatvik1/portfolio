@@ -26,6 +26,7 @@
 	"dependencies": {
 		"@aws-sdk/client-ses": "^3.654.0",
 		"@godaddy/terminus": "^4.12.1",
+		"@vercel/analytics": "^2.0.1",
 		"dotenv": "^16.4.5",
 		"express": "^4.21.0",
 		"gsap": "^3.12.5",
