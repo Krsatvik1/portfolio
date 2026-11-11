@@ -71,13 +71,7 @@
 
     <ol>
       <li>
-        <div class="pic">
-          <div class="drag">
-            <div class="file"><img src="/keep-working/icon.png" alt="" /><span>Keep Working</span></div>
-            <svg class="arrow" viewBox="0 0 60 20" aria-hidden="true"><path d="M2 10h52m0 0-7-6m7 6-7 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <div class="file"><div class="folder"></div><span>Applications</span></div>
-          </div>
-        </div>
+        <div class="pic shot"><img src="/keep-working/step-1.jpg" alt="Finder showing Keep Working in Downloads, with Applications in the sidebar" /></div>
         <p><b>Unzip it</b> and drag Keep Working into Applications.</p>
       </li>
 
@@ -108,17 +102,13 @@
       </li>
 
       <li>
-        <div class="pic">
-          <div class="menu">
-            <i>New Folder</i><i>Get Info</i><i>Change Wallpaper…</i><i class="hit">Edit Widgets…</i>
-          </div>
-        </div>
+        <div class="pic shot"><img src="/keep-working/step-4.jpg" alt="The desktop's right-click menu with Edit Widgets highlighted" /></div>
         <p><b>Right-click the desktop,</b> choose Edit Widgets, find Keep Working, and pick a size.</p>
       </li>
     </ol>
 
     <div class="alt">
-      <p class="small">Or skip steps 2 and 3 with one line in Terminal. It clears the downloaded-from-the-web flag on the app.</p>
+      <p class="small">Or skip steps 2 and 3 with one line in Terminal. Copy it, open Terminal (⌘ Space, type Terminal), paste with ⌘V and press Return. It clears the downloaded-from-the-web flag on the app.</p>
       <div class="cmd">
         <code>{CMD}</code>
         <button type="button" on:click={copy}>{copied ? "Copied" : "Copy"}</button>
@@ -207,6 +197,8 @@
     display: grid; place-items: center; overflow: hidden; padding: 16px;
     font-size: 12px; line-height: 1.3;
   }
+  .pic.shot { padding: 12px; }
+  .pic.shot img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.35); }
   .hit { background: var(--clay) !important; color: #fff !important; box-shadow: 0 0 0 4px rgba(217, 119, 87, 0.25); }
   .pic i { font-style: normal; }
 
