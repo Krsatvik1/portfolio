@@ -64,11 +64,21 @@
       Download for macOS
     </a>
     <span class="meta">Open source on <a href={REPO}>GitHub</a> · macOS 14+</span>
+    <a class="first" href="#install">
+      Read first: how to install
+      <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10m0 0-4-4m4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
   </section>
 
   <section class="film">
     <!-- svelte-ignore a11y-media-has-caption -->
     <video src="/keep-working/keep-working.mp4" poster="/keep-working/poster.jpg" autoplay muted loop playsinline controls preload="metadata"></video>
+  </section>
+
+  <section class="install" id="install">
+    <h2>How to install</h2>
+    <!-- svelte-ignore a11y-media-has-caption -->
+    <video src="/keep-working/install.mp4" poster="/keep-working/install-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
   </section>
 
   <section class="states">
@@ -80,10 +90,14 @@
     {/each}
   </section>
 
-  <section class="install">
-    <h2>How to install</h2>
-    <!-- svelte-ignore a11y-media-has-caption -->
-    <video src="/keep-working/install.mp4" poster="/keep-working/install-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
+
+  <section class="contribute">
+    <h2>Want to contribute?</h2>
+    <p>It's open source. Read the code, open an issue, send a fix.</p>
+    <a class="pill light" href={REPO}>
+      <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+      Check out the code
+    </a>
   </section>
 
   <footer class="end">
@@ -123,6 +137,14 @@
   .meta { font-size: 13px; color: var(--mute); }
   .meta a { color: inherit; text-underline-offset: 2px; }
   .meta a:hover { color: var(--ink); }
+  .first {
+    display: inline-flex; align-items: center; gap: 8px; margin-top: 10px;
+    background: rgba(217, 119, 87, 0.14); color: #8a3d22; text-decoration: none;
+    font-size: 15px; font-weight: 600; padding: 10px 18px; border-radius: 999px;
+    box-shadow: inset 0 0 0 1px rgba(217, 119, 87, 0.35);
+  }
+  .first:hover { background: rgba(217, 119, 87, 0.22); }
+  :global(html:has(.kw)) { scroll-behavior: smooth; }
 
   video { display: block; width: 100%; }
   .film { max-width: min(1200px, calc(72vh * 16 / 9)); margin: 48px auto 0; }
@@ -137,9 +159,18 @@
   .states figcaption { margin-top: 12px; font-size: 15px; font-weight: 600; text-align: center; }
 
   .install { max-width: 1200px; margin: clamp(80px, 10vw, 140px) auto 0; }
-  h2 { font-size: 15px; font-weight: 600; color: var(--mute); margin: 0 0 14px; letter-spacing: 0; }
+  .install h2 { font-size: clamp(26px, 3vw, 36px); font-weight: 700; letter-spacing: -0.03em; text-align: center; margin: 0 0 24px; }
+  .install { scroll-margin-top: 24px; }
   .install video { aspect-ratio: 16 / 9; border-radius: 16px; background: #ddd7cf; }
 
+  .contribute {
+    max-width: 1200px; margin: clamp(80px, 10vw, 140px) auto 0; text-align: center;
+    background: var(--ink); color: var(--paper); border-radius: 24px; padding: clamp(40px, 6vw, 72px) 24px;
+    display: grid; justify-items: center; gap: 14px;
+  }
+  .contribute h2 { font-size: clamp(26px, 3vw, 36px); font-weight: 700; letter-spacing: -0.03em; margin: 0; }
+  .contribute p { margin: 0 0 10px; color: rgba(238, 234, 228, 0.7); font-size: 16px; }
+  .pill.light { background: var(--paper); color: var(--ink); }
   .end { max-width: 1200px; margin: clamp(80px, 10vw, 140px) auto 0; display: grid; justify-items: center; gap: 18px; }
   .by { font-size: 13px; color: var(--mute); text-decoration: none; }
   .by:hover { color: var(--ink); }
