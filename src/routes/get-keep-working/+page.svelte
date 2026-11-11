@@ -34,7 +34,6 @@
 <main class="kw">
   <header class="top">
     <img src="/keep-working/icon.png" alt="" width="30" height="30" />
-    <a class="pill small-pill" href={DOWNLOAD}>Download</a>
   </header>
 
   <section class="hero">
@@ -92,7 +91,7 @@
   }
   :global(body:has(.kw)) { background: #eeeae4; }
 
-  .top { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 18px 0; }
+  .top { display: flex; justify-content: center; align-items: center; max-width: 1200px; margin: 0 auto; padding: 18px 0; }
   .top img { display: block; }
 
   .pill {
@@ -102,7 +101,6 @@
     transition: transform 0.15s ease;
   }
   .pill:hover { transform: translateY(-1px); }
-  .small-pill { font-size: 13px; padding: 8px 16px; }
 
   .hero { text-align: center; margin: clamp(24px, 5vw, 56px) auto 0; display: grid; justify-items: center; gap: 14px; }
   h1 { font-size: clamp(48px, 8vw, 96px); line-height: 0.95; letter-spacing: -0.045em; font-weight: 700; margin: 0; }
