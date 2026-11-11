@@ -62,7 +62,7 @@
   </section>
 
   <section class="install">
-    <h2>Install</h2>
+    <h2>How to install</h2>
     <!-- svelte-ignore a11y-media-has-caption -->
     <video src="/keep-working/install.mp4" poster="/keep-working/install-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
     <div class="cmd">
