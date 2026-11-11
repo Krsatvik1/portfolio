@@ -75,10 +75,10 @@
     </div>
 
     <ol class="steps">
-      <li><b>Unzip it</b> and drag Keep Working into Applications.</li>
-      <li><b>Open it.</b> macOS stops it the first time. Click Done.</li>
-      <li><b>System Settings, Privacy &amp; Security.</b> Click Open Anyway, confirm, then Touch ID or your password.</li>
-      <li><b>Right-click the desktop,</b> choose Edit Widgets, find Keep Working, and pick a size.</li>
+      <li><b>Drag it</b> into Applications.</li>
+      <li><b>Open it.</b> macOS stops it once. Click Done.</li>
+      <li><b>Privacy &amp; Security:</b> Open Anyway, then Touch ID.</li>
+      <li><b>Right-click the desktop,</b> choose Edit Widgets, and drag Keep Working out.</li>
     </ol>
 
     <div class="alt">
