@@ -2,7 +2,7 @@
   // Download page for the Keep Working widget (app repo: session-pulse, GitHub Krsatvik1/keep-working).
   // Visual first: the films and the widget's own loops carry it; words only where a picture can't.
   // Media in static/keep-working, rendered from the widget's views (Tools/Film.swift, Tools/InstallFilm.swift).
-  const DOWNLOAD = "https://github.com/Krsatvik1/keep-working/releases/latest/download/KeepWorking.zip";
+  const DOWNLOAD = "https://github.com/Krsatvik1/keep-working/releases/latest/download/KeepWorking.dmg";
   const REPO = "https://github.com/Krsatvik1/keep-working";
   const CMD = 'xattr -dr com.apple.quarantine "/Applications/Keep Working.app"';
 
