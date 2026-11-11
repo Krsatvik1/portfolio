@@ -20,6 +20,10 @@
   import Button from "$lib/components/Button.svelte";
   import Footer from "./Footer.svelte";
   import { navState } from "$lib/store.js";
+  import { page } from "$app/stores";
+
+  // Pages that stand on their own, without the site's header, grid and footer
+  $: bare = $page.url.pathname.startsWith("/get-keep-working");
 
   let NavHeaderAimation = () => {
     if (window.innerWidth >= 1024) {
@@ -52,6 +56,7 @@
       link.click();
     }
   onMount(() => {
+    if (bare) return;
 
    
 
@@ -100,6 +105,9 @@
     });
   });
 </script>
+{#if bare}
+<slot />
+{:else}
 <div class="hidden col-span-1 col-span-2 col-span-3 col-span-4 lg:col-span-1 lg:col-span-2 lg:col-span-3 lg:col-span-4"></div>
 <div
   class="flex animation-2 w-[calc(100%)] overflow-y-visible sticky top-0 left-0 justify-between z-50"
@@ -153,3 +161,4 @@
 <div class="absolute z-50 top-0 left-0">
   <Modal />
 </div>
+{/if}
